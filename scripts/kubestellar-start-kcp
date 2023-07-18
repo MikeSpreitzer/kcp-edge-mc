@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+
+# Usage: $0 (--bind-address=ipaddr | --external-hostname=addr_or_name | --extra-san=TYPE:val | -X | other_kcp_start_option)*
+
+# If a bind-address is given then it will be added to the SANs,
+# otherwise the IPv4 address of the device on the default
+# IPv4 route will be added to the SANs.
+
+# If external-hostname is given then it will be added to the SANS.
+# Pattern-matching will be used to decide whether it is an address
+# or a hostname.
+
+set -e
+
+this=$0
+
+bind_address=""
+external_hostname=""
+SAN="IP:127.0.0.1,DNS:localhost"
+kcp_flags=()
+
+while (( $# > 0 )); do
+    case "$1" in
+      (--bind-address=?*) bind_address=${1#--bind-address=};;
+      (--external-hostname=?*)
+        external_hostname=${1#--external-hostname=}
+	kcp_flags[${#kcp_flags[*]}]="$1"
+	;;
+      (--extra-san=?*) SAN="${SAN},${1#--extra-san=}";;
+      (-X) set -x;;
+      (-*) kcp_flags[${#kcp_flags[*]}]="$1";;
+      (*)
+        echo "Usage: $0 (--bind-address=ipaddr | --external-hostname=addr_or_name | --extra-san=TYPE:val | -X | other_kcp_start_option)*" >&2
+	exit 1;;
+    esac
+    shift
+done
+
+function get_default_addr_darwin() {
+    default_ifc=$(netstat -f inet -nr | grep '^default ' | head -1 | awk '{ print $4 }')
+    ifconfig $default_ifc | grep -w inet | awk '{ print $2 }'
+}
+
+function get_default_addr_linux() {
+    ip route | grep '^default ' | awk '{ print $9 }'
+}
+
+function get_default_addr() {
+    if ip route &> /dev/null;
+    then get_default_addr_linux
+    else get_default_addr_darwin
+    fi
+}
+
+if [ -z "$bind_address" ]; then
+    server_address=$(get_default_addr)
+    echo "Adding server IP address $server_address to the SANs" >&2
+    SAN="$SAN,IP:$server_address"
+else
+    SAN="$SAN,IP:$bind_address"
+    kcp_flags[${#kcp_flags[*]}]="--bind-address=$bind_address"
+fi
+
+if [ -n "$external_hostname" ]; then
+    if egrep '^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$' <<<"$external_hostname"
+    then SAN="$SAN,IP:$external_hostname"
+    else SAN="$SAN,DNS:$external_hostname"
+    fi
+fi
+
+echo "ba=$bind_address eh=$external_hostname sans=$SAN kf=(${kcp_flags[@]})"
+
+${0%start-kcp}ensure-ca
+${0%start-kcp}make-server-cert --subject-alt-names="$SAN"
+
+kcp start ${kcp_flags[@]} \
+    --tls-cert-file pki/issued/kcp-server.crt \
+    --tls-private-key-file pki/private/kcp-server.key
