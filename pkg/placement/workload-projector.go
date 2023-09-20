@@ -1108,30 +1108,26 @@ func (wp *workloadProjector) Transact(xn func(WorkloadProjectionSections)) {
 	wp.Lock()
 	defer wp.Unlock()
 	logger.V(3).Info("Begin transaction")
-	changedDestinations := func() *MutableSet[SinglePlacement] {
-		var ms MutableSet[SinglePlacement] = NewMapSet[SinglePlacement]()
-		ms = WrapSetWithMutex(ms)
-		return &ms
-	}()
-	wp.changedDestinations = changedDestinations
+	changedDestinations := WrapSetWithMutex[SinglePlacement](NewMapSet[SinglePlacement]())
+	wp.changedDestinations = &changedDestinations
 	recordLogger := logger.V(4)
 	changedSources := WrapSetWithMutex[logicalcluster.Name](NewMapSet[logicalcluster.Name]())
 	xn(WorkloadProjectionSections{
 		SetWriterFork[NamespacedDistributionTuple](false,
 			wp.nsdDistributionsForSync, wp.nsdDistributionsForProj,
-			recordPart(recordLogger, "nsd.src", changedDestinations, factorNamespacedDistributionTupleForSync1),
+			recordPart(recordLogger, "nsd.src", &changedDestinations, factorNamespacedDistributionTupleForSync1),
 			recordPart(recordLogger, "nsd.dest", &changedSources, factorNamespacedDistributionTupleForProj1)),
 		NewMappingReceiverFork[ProjectionModeKey, ProjectionModeVal](wp.nsModesForSync, wp.nsModesForProj,
 			NewLoggingMappingReceiver[ProjectionModeKey, ProjectionModeVal]("wp.nsModes", recordLogger)),
 		SetWriterFork[NonNamespacedDistributionTuple](false,
 			wp.nnsDistributionsForSync, wp.nnsDistributionsForProj,
-			recordPart(recordLogger, "nns.src", changedDestinations, factorNonNamespacedDistributionTupleForSync1),
+			recordPart(recordLogger, "nns.src", &changedDestinations, factorNonNamespacedDistributionTupleForSync1),
 			recordPart(recordLogger, "nns.dest", &changedSources, factorNonNamespacedDistributionTupleForProj1)),
 		NewMappingReceiverFork[ProjectionModeKey, ProjectionModeVal](wp.nnsModesForSync, wp.nnsModesForProj,
 			NewLoggingMappingReceiver[ProjectionModeKey, ProjectionModeVal]("wp.nnsModes", recordLogger)),
 		wp.upsyncs})
 	logger.V(3).Info("Transaction response",
-		"changedDestinations", VisitableToSlice[SinglePlacement](*changedDestinations),
+		"changedDestinations", VisitableToSlice[SinglePlacement](changedDestinations),
 		"changedSources", VisitableToSlice[logicalcluster.Name](changedSources))
 	changedSources.Visit(func(source logicalcluster.Name) error {
 		wps, have := wp.perSource.Get(source)
@@ -1207,7 +1203,7 @@ func (wp *workloadProjector) Transact(xn func(WorkloadProjectionSections)) {
 
 		return nil
 	})
-	(*changedDestinations).Visit(func(destination SinglePlacement) error {
+	changedDestinations.Visit(func(destination SinglePlacement) error {
 		mbwsName := SPMailboxWorkspaceName(destination)
 		wp.mbwsNameToSP.Put(mbwsName, destination)
 		logger := logger.WithValues("destination", destination)
