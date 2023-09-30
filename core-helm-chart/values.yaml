@@ -22,7 +22,7 @@ namespace: kubestellar
 image:
   repository: quay.io/kubestellar/kubestellar
   pullPolicy: IfNotPresent
-  tag: stable
+  tag: git-523ce181b-clean
 
 # Storage size
 storageSize: 1Gi

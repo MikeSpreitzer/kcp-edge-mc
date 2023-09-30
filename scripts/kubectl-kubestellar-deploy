@@ -16,13 +16,13 @@
 
 # Purpose: deploy the KubeStellar Helm chart
 
-# Usage: $0 (--external-endpoint $domain_name:$port | --openshift $bool | -X | kubectl_flag)*
+# Usage: $0 (--external-endpoint $domain_name:$port | --openshift $bool | --image-repo $repo | --image-tag $tag | -X | kubectl_flag)*
 
 KSDIR=$(cd $(dirname ${BASH_SOURCE[0]}); cd ..; pwd)
 
-image_tag=b23-09-15-04-52-13
-
 external_endpoint=""
+flag_image_tag=""
+flag_image_repo=""
 openshift=false
 helm_flags=()
 
@@ -38,11 +38,21 @@ while (( $# > 0 )); do
 	    then openshift="$2"; shift
 	    else echo "$0: missing openshift value" >&2; exit 1
 	    fi;;
+	(--image-repo)
+	    if (( $# >1 ))
+	    then flag_image_repo="--set-string image.repository=$2"; shift
+	    else echo "$0: missing image-repo value" >&2; exit 1
+	    fi;;
+	(--image-tag)
+	    if (( $# >1 ))
+	    then flag_image_tag="--set-string image.tag=$2"; shift
+	    else echo "$0: missing image-tag value" >&2; exit 1
+	    fi;;
 	(--*=*|-?=*)
 	    helm_flags[${#helm_flags[*]}]="$1";;
 	(-X) set -x;;
 	(-h)
-	    echo "Usage: kubectl kubestellar deploy (\$kubectl_flag | --external_endpoint \$domain_name:$port | --openshift \$boolean)*"
+	    echo "Usage: kubectl kubestellar deploy (\$kubectl_flag | --external_endpoint \$domain_name:$port | --openshift \$boolean | --image-repo \$repo | --iimage-tag \$tag)*"
 	    exit 0;;
 	(--*|-?)
 	    if (( $# > 1 ))
@@ -86,5 +96,4 @@ esac
 
 set -e
 
-helm upgrade -i "${helm_flags[@]}" kubestellar ${KSDIR}/core-helm-chart --set clusterType=$cluster_type --set-string "EXTERNAL_HOSTNAME=$external_hostname" --set "EXTERNAL_PORT=$external_port" --set image.tag=$image_tag
-
+helm upgrade -i "${helm_flags[@]}" kubestellar ${KSDIR}/core-helm-chart --set clusterType=$cluster_type --set-string "EXTERNAL_HOSTNAME=$external_hostname" --set "EXTERNAL_PORT=$external_port" $flag_image_repo $flag_image_tag

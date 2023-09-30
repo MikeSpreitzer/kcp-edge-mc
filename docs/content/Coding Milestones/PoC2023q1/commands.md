@@ -315,6 +315,10 @@ appear on the command line, in any order.
   hostname will start with a string derived from the Route in the
   chart (currently "kubestellar-route-kubestellar") and continue with
   "." and then the ingress domain name for the cluster.
+- `--image-repo $repo` and/or `--image-tag $tag`, overriding the
+  normal choice for the reference to the image for the core
+  container. Note: these flags are planned to change in the future,
+  when the Helm chart changes to use more than one container.
 - a command line flag for the `helm upgrade` command.
 - `-X` turns on debug echoing of all the commands in the script that
   implements this command.
