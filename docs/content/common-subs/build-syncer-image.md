@@ -2,6 +2,10 @@
 Build the syncer image.
 
 ```shell
+echo
+echo debug environment
+printenv
+echo
 export SYNCER_IMG_REF=$(
   if (docker info | grep podman) &> /dev/null
   then export DOCKER_HOST=unix://${HOME}/.local/share/containers/podman/machine/qemu/podman.sock
