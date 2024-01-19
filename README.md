@@ -56,14 +56,15 @@ TODO: Need update!
 - Unbundled resources are the default and preferred output of most cloud-native tools making KubeStellar use and integration easy
 
 ## QuickStart
+
 TBD
+
 The supported documents are as follows.
 
+- [v0.20 start](docs/content/v0.20)
 - [prerequisites](test/pre-reqs.md)
 - [the multi-cluster end-to-end test](test/e2e/multi-cluster-deployment/README.md)
 - [the singleton status return end-to-end test](test/e2e/singleton-status/README.md)
-
-The interim user documents for v0.20.0-alpha.1 are here: [docs/content/v0.20](docs/content/v0.20)
 
 ## Roadmap for the Project
 TBD
