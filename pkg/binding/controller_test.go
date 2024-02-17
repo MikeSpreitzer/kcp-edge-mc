@@ -25,6 +25,7 @@ import (
 	k8score "k8s.io/api/core/v1"
 	k8snetv1 "k8s.io/api/networking/v1"
 	k8snetv1b1 "k8s.io/api/networking/v1beta1"
+	rbacv1 "k8s.io/api/rbac/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	k8slabels "k8s.io/apimachinery/pkg/labels"
 	k8sschema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -34,6 +35,8 @@ import (
 	"k8s.io/kubernetes/test/integration/framework"
 
 	ksapi "github.com/kubestellar/kubestellar/api/control/v1alpha1"
+	ksclient "github.com/kubestellar/kubestellar/pkg/generated/clientset/versioned/typed/control/v1alpha1"
+
 	"github.com/kubestellar/kubestellar/pkg/util"
 )
 
@@ -51,23 +54,29 @@ func TestController(t *testing.T) {
 			cancel()
 			teardown()
 		}
+		ksClient, err := ksclient.NewForConfig(config)
+		if err != nil {
+			t.Fatalf("Failed to create KubeStellar client: %w", err)
+		}
 		namespaces := []*k8score.Namespace{
 			generateNamespace(t, ctx, rg, "ns1", client),
 			generateNamespace(t, ctx, rg, "ns2", client),
 			generateNamespace(t, ctx, rg, "ns3", client),
 		}
 		objs := make([]mrObjRsc, nObj)
-		expectedObjRefs := sets.New[util.Key]()
-		tests := []ksapi.DownsyncObjectTest{}
-		for i := nObj / 3; i < nObj; i++ {
-			tests = append(tests, extractTest(rg, objs[i]))
-		}
 		for i := 0; i < nObj; i++ {
 			thisClient := client
-			if i*3 >= nObj*2 {
+			if i*3 >= nObj*2 { // do not actually create the last third
 				thisClient = nil
 			}
 			objs[i] = generateObject(t, ctx, rg, 0, namespaces, thisClient)
+		}
+		tests := []ksapi.DownsyncObjectTest{}
+		for i := nObj / 3; i < nObj; i++ { // request downsync of the last 2/3
+			tests = append(tests, extractTest(rg, objs[i]))
+		}
+		expectedObjRefs := sets.New[util.Key]()
+		for i := 0; i*3 < nObj*2; i++ { // any of the first 2/3 might match a test
 			if objs[i].MatchesAny(t, tests) {
 				key, err := util.KeyForGroupVersionKindNamespaceName(objs[i].mrObject)
 				if err != nil {
@@ -76,6 +85,7 @@ func TestController(t *testing.T) {
 				expectedObjRefs.Insert(key)
 			}
 		}
+		logger.Info("Generated mrObjRscs", "objs", objs)
 		bp := &ksapi.BindingPolicy{
 			ObjectMeta: metav1.ObjectMeta{
 				Name: fmt.Sprintf("trial%d", trial),
@@ -84,9 +94,17 @@ func TestController(t *testing.T) {
 				Downsync: tests,
 			},
 		}
-		ctlr, err := NewController(mgr, config, config, "wds1", nil)
+		_, err = ksClient.BindingPolicies().Create(ctx, bp, metav1.CreateOptions{})
+		if err != nil {
+			t.Fatalf("Failed to create BidingPolicy: %w", err)
+		}
+		ctlr, err := NewController(logger, config, config, "test-wds", nil)
 		if err != nil {
 			t.Fatalf("Failed to create controller: %w", err)
+		}
+		err = ctlr.EnsureCRDs(ctx)
+		if err != nil {
+			t.Fatal(err)
 		}
 		ctlr.Start(ctx, 4)
 		fullTeardwon()
@@ -270,14 +288,14 @@ func generateObject(t *testing.T, ctx context.Context, rg *rand.Rand, index int,
 		}
 		ans = mrObjRsc{obj, "configmaps", namespace}
 	case x < 20:
-		obj := &k8score.Node{
-			TypeMeta:   typeMeta("Node", k8score.SchemeGroupVersion),
+		obj := &rbacv1.ClusterRole{
+			TypeMeta:   typeMeta("ClusterRole", rbacv1.SchemeGroupVersion),
 			ObjectMeta: generateObjectMeta(rg, fmt.Sprintf("o%d", index), nil),
 		}
 		if client != nil {
-			_, err = client.CoreV1().Nodes().Create(ctx, obj, metav1.CreateOptions{})
+			_, err = client.RbacV1().ClusterRoles().Create(ctx, obj, metav1.CreateOptions{})
 		}
-		ans = mrObjRsc{obj, "nodes", nil}
+		ans = mrObjRsc{obj, "clusterroles", nil}
 	case x < 30:
 		obj := &k8snetv1.NetworkPolicy{
 			TypeMeta:   typeMeta("NetworkPolicy", k8snetv1.SchemeGroupVersion),
@@ -295,7 +313,7 @@ func generateObject(t *testing.T, ctx context.Context, rg *rand.Rand, index int,
 		if client != nil {
 			_, err = client.NetworkingV1beta1().IngressClasses().Create(ctx, obj, metav1.CreateOptions{})
 		}
-		ans = mrObjRsc{obj, "networkpolicies", nil}
+		ans = mrObjRsc{obj, "ingressclasses", nil}
 	}
 	if err != nil {
 		t.Fatalf("Failed to create object %#v: %w", ans.mrObject, err)
