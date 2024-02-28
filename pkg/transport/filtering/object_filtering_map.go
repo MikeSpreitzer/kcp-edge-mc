@@ -17,9 +17,11 @@ limitations under the License.
 package filtering
 
 import (
+	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+	"k8s.io/klog/v2"
 )
 
 // cleanObjectSpecificsFunction is a function for cleaning fields from a specific object.
@@ -31,7 +33,7 @@ type cleanObjectSpecificsFunction func(object *unstructured.Unstructured)
 func NewObjectFilteringMap() *ObjectFilteringMap {
 	filteringMap := map[schema.GroupVersionKind]cleanObjectSpecificsFunction{
 		corev1.SchemeGroupVersion.WithKind("Service"): cleanServiceFields,
-		corev1.SchemeGroupVersion.WithKind("Job"):     cleanJob,
+		batchv1.SchemeGroupVersion.WithKind("Job"):    cleanJob,
 	}
 
 	return &ObjectFilteringMap{
@@ -44,9 +46,13 @@ type ObjectFilteringMap struct {
 }
 
 func (filteringMap *ObjectFilteringMap) CleanObjectSpecifics(object *unstructured.Unstructured) {
-	filteringFunction, found := filteringMap.gvkToFilteringFunc[object.GetObjectKind().GroupVersionKind()]
+	gvk := object.GetObjectKind().GroupVersionKind()
+	filteringFunction, found := filteringMap.gvkToFilteringFunc[gvk]
 	if !found {
+		klog.V(4).InfoS("No specifics", "gvk", gvk)
 		return // if no filtering function was defined for this gvk, do not clean any field
+	} else {
+		klog.V(4).InfoS("Found specifics", "gvk", gvk)
 	}
 	// otherwise, need to clean specific fields from this object
 	filteringFunction(object)

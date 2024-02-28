@@ -18,12 +18,14 @@ package filtering
 
 import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
+	"k8s.io/klog/v2"
 )
 
 func cleanJob(object *unstructured.Unstructured) {
 	objectU := object.UnstructuredContent()
 	podLabels, found, _ := unstructured.NestedMap(objectU, "spec", "template", "metadata", "labels")
 	if !found {
+		klog.V(4).InfoS("No pod labels", "objName", object.GetName())
 		return
 	}
 	delete(podLabels, "batch.kubernetes.io/controller-uid")
@@ -32,4 +34,5 @@ func cleanJob(object *unstructured.Unstructured) {
 	delete(podLabels, "job-name")
 	_ = unstructured.SetNestedMap(objectU, podLabels, "spec", "template", "metadata", "labels")
 	object.SetUnstructuredContent(objectU)
+	klog.V(4).InfoS("Cleaned", "objectU", objectU)
 }
