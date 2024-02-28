@@ -35,7 +35,6 @@ import (
 	k8slabels "k8s.io/apimachinery/pkg/labels"
 	k8sruntime "k8s.io/apimachinery/pkg/runtime"
 	k8sschema "k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apimachinery/pkg/util/sets"
 	dynamicfake "k8s.io/client-go/dynamic/fake"
 	k8sfake "k8s.io/client-go/kubernetes/fake"
 	"k8s.io/klog/v2/ktesting"
@@ -43,7 +42,6 @@ import (
 
 	ksapi "github.com/kubestellar/kubestellar/api/control/v1alpha1"
 	ksfakeclient "github.com/kubestellar/kubestellar/pkg/generated/clientset/versioned/fake"
-	"github.com/kubestellar/kubestellar/pkg/util"
 )
 
 func TestMatching(t *testing.T) {
@@ -69,7 +67,6 @@ func TestMatching(t *testing.T) {
 			generateNamespace(rg, "ns3"),
 		}
 		objs := make([]mrObjRsc, nObj)
-		expectedObjRefs := sets.New[util.Key]()
 		initialObjects := []k8sruntime.Object{}
 		for _, ns := range namespaces {
 			initialObjects = append(initialObjects, ns)
@@ -83,15 +80,6 @@ func TestMatching(t *testing.T) {
 		tests := []ksapi.DownsyncObjectTest{}
 		for i := nObj / 3; i < nObj; i++ {
 			tests = append(tests, extractTest(rg, objs[i]))
-		}
-		for i := 0; i < nObj; i++ {
-			if objs[i].MatchesAny(t, tests) {
-				key, err := util.KeyForGroupVersionKindNamespaceName(objs[i].mrObject)
-				if err != nil {
-					t.Fatalf("Failed to extract Key from %#v: %s", objs[i].mrObject, err)
-				}
-				expectedObjRefs.Insert(key)
-			}
 		}
 		bp := &ksapi.BindingPolicy{
 			TypeMeta: typeMeta("BindingPolicy", ksapi.GroupVersion),
@@ -167,7 +155,6 @@ func LabelsMatchAny(t *testing.T, labels map[string]string, selectors []metav1.L
 		sel, err := metav1.LabelSelectorAsSelector(&ls)
 		if err != nil {
 			t.Fatalf("Failed to convert LabelSelector %#v to labels.Selector: %s", ls, err)
-			continue
 		}
 		if sel.Matches(k8slabels.Set(labels)) {
 			return true

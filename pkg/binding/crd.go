@@ -23,8 +23,10 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/tools/cache"
+	"k8s.io/klog/v2"
 
 	"github.com/kubestellar/kubestellar/pkg/util"
 )
@@ -35,24 +37,26 @@ type APIResource struct {
 }
 
 // Handle CRDs should account for CRDs being added or deleted to start/stop new informers as needed
-func (c *Controller) handleCRD(_ runtime.Object) error {
-	toStartList, toStopList, err := c.checkAPIResourcesForUpdates()
+func (c *Controller) handleCRD(ctx context.Context, _ util.ObjectIdentifier) error {
+	logger := klog.FromContext(ctx)
+
+	toStartList, toStopList, err := c.checkAPIResourcesForUpdates(ctx)
 	if err != nil {
 		return err
 	}
 
-	go c.startInformersForNewAPIResources(toStartList)
+	go c.startInformersForNewAPIResources(ctx, toStartList)
 
-	for _, key := range toStopList {
-		c.logger.Info("API removed, stopping informer.", "key", key)
-		stopper := c.stoppers[key]
+	for _, gvk := range toStopList {
+		logger.Info("API removed, stopping informer.", "gvk", gvk)
+		stopper := c.stoppers[gvk]
 		// close channel
 		close(stopper)
 		// remove entries for key
-		delete(c.informers, key)
-		delete(c.listers, key)
-		delete(c.stoppers, key)
-		c.gvkGvrMapper.DeleteByGvkKey(key)
+		delete(c.informers, gvk)
+		delete(c.listers, gvk)
+		delete(c.stoppers, gvk)
+		c.gvkToGvrMapper.Delete(gvk)
 	}
 
 	return nil
@@ -60,14 +64,17 @@ func (c *Controller) handleCRD(_ runtime.Object) error {
 
 // checks what APIs need starting new informers or stopping informers.
 // Returns a list of APIResources for informers to start and a list of keys for infomers to stop
-func (c *Controller) checkAPIResourcesForUpdates() ([]APIResource, []string, error) {
+func (c *Controller) checkAPIResourcesForUpdates(ctx context.Context) ([]APIResource, []schema.GroupVersionKind,
+	error) {
+	logger := klog.FromContext(ctx)
+
 	toStart := []APIResource{}
-	toStop := []string{}
+	toStop := []schema.GroupVersionKind{}
 
 	// tracking keys are used to detect what API resources have been removed
-	trackingKeys := map[string]bool{}
+	trackingKeys := sets.Set[schema.GroupVersionKind]{}
 	for k := range c.informers {
-		trackingKeys[k] = true
+		trackingKeys.Insert(k)
 	}
 
 	// Get all the api resources in the cluster
@@ -83,7 +90,7 @@ func (c *Controller) checkAPIResourcesForUpdates() ([]APIResource, []string, err
 	for _, list := range apiResources {
 		gv, err := schema.ParseGroupVersion(list.GroupVersion)
 		if err != nil {
-			c.logger.Error(err, "Failed to parse a GroupVersion", "groupVersion", list.GroupVersion)
+			logger.Error(err, "Failed to parse a GroupVersion", "groupVersion", list.GroupVersion)
 			continue
 		}
 		if _, excluded := excludedGroups[gv.Group]; excluded {
@@ -98,7 +105,7 @@ func (c *Controller) checkAPIResourcesForUpdates() ([]APIResource, []string, err
 			}
 			informable := verbsSupportInformers(resource.Verbs)
 			if informable {
-				key := util.KeyForGroupVersionKind(gv.Group, gv.Version, resource.Kind)
+				key := gv.WithKind(resource.Kind)
 				if _, ok := c.informers[key]; !ok {
 					toStart = append(toStart, APIResource{
 						groupVersion: gv,
@@ -115,12 +122,15 @@ func (c *Controller) checkAPIResourcesForUpdates() ([]APIResource, []string, err
 	for k := range trackingKeys {
 		toStop = append(toStop, k)
 	}
+
 	return toStart, toStop, nil
 }
 
-func (c *Controller) startInformersForNewAPIResources(toStartList []APIResource) {
+func (c *Controller) startInformersForNewAPIResources(ctx context.Context, toStartList []APIResource) {
+	logger := klog.FromContext(ctx)
+
 	for _, toStart := range toStartList {
-		c.logger.Info("New API added. Starting informer for:", "group", toStart.groupVersion.Group,
+		logger.Info("New API added. Starting informer for:", "group", toStart.groupVersion.Group,
 			"version", toStart.groupVersion, "kind", toStart.resource.Kind)
 
 		gvr := schema.GroupVersionResource{
@@ -156,12 +166,11 @@ func (c *Controller) startInformersForNewAPIResources(toStartList []APIResource)
 				c.handleObject(obj)
 			},
 		})
-		key := util.KeyForGroupVersionKind(toStart.groupVersion.Group,
-			toStart.groupVersion.Version, toStart.resource.Kind)
+		key := toStart.groupVersion.WithKind(toStart.resource.Kind)
 		c.informers[key] = informer
 
 		// add the mapping between GVK and GVR
-		c.gvkGvrMapper.Add(toStart.groupVersion.WithKind(toStart.resource.Kind), gvr)
+		c.gvkToGvrMapper.Add(toStart.groupVersion.WithKind(toStart.resource.Kind), gvr)
 
 		// create and index the lister
 		lister := cache.NewGenericLister(informer.GetIndexer(), gvr.GroupResource())
