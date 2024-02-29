@@ -17,22 +17,73 @@ limitations under the License.
 package filtering
 
 import (
+	"github.com/kubestellar/kubestellar/pkg/util"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/klog/v2"
+	"sigs.k8s.io/structured-merge-diff/v4/fieldpath"
 )
 
 func cleanJob(object *unstructured.Unstructured) {
 	objectU := object.UnstructuredContent()
-	podLabels, found, _ := unstructured.NestedMap(objectU, "spec", "template", "metadata", "labels")
+	mfes := object.GetManagedFields()
+	fm := util.NewFieldMap("", mfes...)
+	klog.InfoS("ManagedFields", "objName", object.GetName(), "mfes", mfes, "fm", fm)
+	spec, found, _ := unstructured.NestedMap(objectU, "spec")
 	if !found {
-		klog.V(4).InfoS("No pod labels", "objName", object.GetName())
+		klog.V(4).InfoS("No spec", "objName", object.GetName())
 		return
 	}
-	delete(podLabels, "batch.kubernetes.io/controller-uid")
-	delete(podLabels, "batch.kubernetes.io/job-name")
-	delete(podLabels, "controller-uid")
-	delete(podLabels, "job-name")
+	fmSpec := fm.Advance(fieldpath.MakePathOrDie("spec"))
+	selector, foundSelector, _ := unstructured.NestedMap(spec, "selector")
+	if !foundSelector {
+		klog.V(4).InfoS("No selector", "objName", object.GetName())
+	} else {
+		fmSelector := fmSpec.Advance(fieldpath.MakePathOrDie("selector"))
+		trimMapByFieldMap(selector, fmSelector)
+	}
+	podLabels, foundlabels, _ := unstructured.NestedMap(spec, "template", "metadata", "labels")
+	if !foundlabels {
+		klog.V(4).InfoS("No pod labels", "objName", object.GetName())
+	} else {
+		fmPodLabels := fmSpec.Advance(fieldpath.MakePathOrDie("template", "metadata", "labels"))
+		trimMapByFieldMap(podLabels, fmPodLabels)
+	}
 	_ = unstructured.SetNestedMap(objectU, podLabels, "spec", "template", "metadata", "labels")
 	object.SetUnstructuredContent(objectU)
-	klog.V(4).InfoS("Cleaned", "objectU", objectU)
+	klog.V(4).InfoS("Cleaned", "objectU", objectU, "fieldMap", fm, "foundSelector", foundSelector, "foundLabels", foundlabels)
+}
+
+func trimMapByFieldMap(obj map[string]any, fm util.FieldMap) {
+	for key, val := range obj {
+		fmVal := fm.Advance(fieldpath.MakePathOrDie(key))
+		if fmVal.Empty() {
+			delete(obj, key)
+			continue
+		}
+		switch typed := val.(type) {
+		case map[string]any:
+			trimMapByFieldMap(typed, fmVal)
+		case []any:
+			trimSliceByFieldMap(typed, fmVal)
+		}
+	}
+}
+
+func trimSliceByFieldMap(obj []any, fm util.FieldMap) []any {
+	ans := make([]any, 0, len(obj))
+	for idx, val := range obj {
+		fmVal := fm.Advance(fieldpath.MakePathOrDie(idx))
+		if fmVal.Empty() {
+			continue
+		}
+		outVal := val
+		switch typed := outVal.(type) {
+		case map[string]any:
+			trimMapByFieldMap(typed, fmVal)
+		case []any:
+			outVal = trimSliceByFieldMap(typed, fmVal)
+		}
+		ans = append(ans, outVal)
+	}
+	return ans
 }

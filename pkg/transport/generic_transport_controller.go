@@ -44,6 +44,7 @@ import (
 	controlv1alpha1informers "github.com/kubestellar/kubestellar/pkg/generated/informers/externalversions/control/v1alpha1"
 	controlv1alpha1listers "github.com/kubestellar/kubestellar/pkg/generated/listers/control/v1alpha1"
 	"github.com/kubestellar/kubestellar/pkg/transport/filtering"
+	"github.com/kubestellar/kubestellar/pkg/util"
 )
 
 const (
@@ -393,9 +394,10 @@ func (c *genericTransportController) getObjectsFromWDS(ctx context.Context, bind
 			continue // no objects from this gvr, skip
 		}
 		gvr := schema.GroupVersionResource{Group: clusterScopedObject.Group, Version: clusterScopedObject.Version, Resource: clusterScopedObject.Resource}
-		gvrDynamicClient := c.wdsDynamicClient.Resource(gvr)
+		// gvrDynamicClient := c.wdsDynamicClient.Resource(gvr)
 		for _, objectName := range clusterScopedObject.ObjectNames {
-			object, err := gvrDynamicClient.Get(ctx, objectName, metav1.GetOptions{})
+			object, err := util.GetWithManagedFields(ctx, c.wdsClientset.ControlV1alpha1().RESTClient(), gvr, "", objectName, metav1.GetOptions{})
+			// object, err := gvrDynamicClient.Get(ctx, objectName, metav1.GetOptions{})
 			if err != nil {
 				return nil, fmt.Errorf("failed to get required cluster-scoped object '%s' with gvr %s from WDS - %w", objectName, gvr, err)
 			}
@@ -405,13 +407,14 @@ func (c *genericTransportController) getObjectsFromWDS(ctx context.Context, bind
 	// add namespace-scoped objects to the 'objectsToPropagate' slice
 	for _, namespaceScopedObject := range binding.Spec.Workload.NamespaceScope {
 		gvr := schema.GroupVersionResource{Group: namespaceScopedObject.Group, Version: namespaceScopedObject.Version, Resource: namespaceScopedObject.Resource}
-		gvrDynamicClient := c.wdsDynamicClient.Resource(gvr)
+		// gvrDynamicClient := c.wdsDynamicClient.Resource(gvr)
 		for _, objectsByNamespace := range namespaceScopedObject.ObjectsByNamespace {
 			if objectsByNamespace.Names == nil {
 				continue // no objects from this namespace, skip
 			}
 			for _, objectName := range objectsByNamespace.Names {
-				object, err := gvrDynamicClient.Namespace(objectsByNamespace.Namespace).Get(ctx, objectName, metav1.GetOptions{})
+				object, err := util.GetWithManagedFields(ctx, c.wdsClientset.ControlV1alpha1().RESTClient(), gvr, objectsByNamespace.Namespace, objectName, metav1.GetOptions{})
+				// object, err := gvrDynamicClient.Namespace(objectsByNamespace.Namespace).Get(ctx, objectName, metav1.GetOptions{})
 				if err != nil {
 					return nil, fmt.Errorf("failed to get required namespace-scoped object '%s' in namespace '%s' with gvr '%s' from WDS - %w", objectName,
 						objectsByNamespace.Namespace, gvr, err)
