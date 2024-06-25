@@ -784,8 +784,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-and-init-a-kind-cluster-as-hosting-cluster" class="md-nav__link">
-    Create and init a kind cluster as hosting cluster
+  <a href="#create-and-init-a-kind-cluster-as-hosting-cluster-with-kflex" class="md-nav__link">
+    Create and init a kind cluster as hosting cluster with kflex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-and-init-a-kind-cluster-as-hosting-cluster-with-curl-to-bash-script" class="md-nav__link">
+    Create and init a kind cluster as hosting cluster with curl-to-bash script
   </a>
   
 </li>
@@ -833,6 +840,13 @@
           <li class="md-nav__item">
   <a href="#kflex-init-create-kind" class="md-nav__link">
     kflex init --create-kind
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curl-to-bash" class="md-nav__link">
+    Curl-to-bash
   </a>
   
 </li>
@@ -2206,8 +2220,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-and-init-a-kind-cluster-as-hosting-cluster" class="md-nav__link">
-    Create and init a kind cluster as hosting cluster
+  <a href="#create-and-init-a-kind-cluster-as-hosting-cluster-with-kflex" class="md-nav__link">
+    Create and init a kind cluster as hosting cluster with kflex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-and-init-a-kind-cluster-as-hosting-cluster-with-curl-to-bash-script" class="md-nav__link">
+    Create and init a kind cluster as hosting cluster with curl-to-bash script
   </a>
   
 </li>
@@ -2255,6 +2276,13 @@
           <li class="md-nav__item">
   <a href="#kflex-init-create-kind" class="md-nav__link">
     kflex init --create-kind
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curl-to-bash" class="md-nav__link">
+    Curl-to-bash
   </a>
   
 </li>
@@ -2319,10 +2347,19 @@ SSL passthrough enabled.</p>
 <p>After the quickstart setup, I looked at an OCM Agent (klusterlet-agent, to be specifc) and did not find a clear passing of kubeconfig. I found adjacent Secrets holding kubeconfigs in which <code>cluster[0].cluster.server</code> was <code>https://kubeflex-control-plane:31048</code>. Note that <code>kubeflex-control-plane</code> is the name of the Docker container running <code>kind</code> cluster serving as KubeFlex hosting cluster. I could not find an explanation for the port number 31048; that Docker container maps port 443 inside to 9443 on the outside.</p>
 <p><code>kflex init</code> takes a command line flag <code>--domain string</code> described as <code>domain for FQDN (default "localtest.me")</code>.</p>
 <h2 id="creating-a-hosting-cluster">Creating a hosting cluster<a class="headerlink" href="#creating-a-hosting-cluster" title="Permanent link">#</a></h2>
-<h3 id="create-and-init-a-kind-cluster-as-hosting-cluster">Create and init a kind cluster as hosting cluster<a class="headerlink" href="#create-and-init-a-kind-cluster-as-hosting-cluster" title="Permanent link">#</a></h3>
+<h3 id="create-and-init-a-kind-cluster-as-hosting-cluster-with-kflex">Create and init a kind cluster as hosting cluster with kflex<a class="headerlink" href="#create-and-init-a-kind-cluster-as-hosting-cluster-with-kflex" title="Permanent link">#</a></h3>
 <p>The following command will use <code>kind</code> to create a cluster with an Ingress controller with SSL passthrough and then proceed to install the KubeFlex implementation in it and set your current kubeconfig context to access that cluster as admin.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>kflex<span class="w"> </span>init<span class="w"> </span>--create-kind
 </code></pre></div>
+<h3 id="create-and-init-a-kind-cluster-as-hosting-cluster-with-curl-to-bash-script">Create and init a kind cluster as hosting cluster with curl-to-bash script<a class="headerlink" href="#create-and-init-a-kind-cluster-as-hosting-cluster-with-curl-to-bash-script" title="Permanent link">#</a></h3>
+<p>There is a bash script at <a href="https://raw.githubusercontent.com/kubestellar/kubestellar/v0.23.0/scripts/create-kind-cluster-with-SSL-passthrough.sh"><code>https://raw.githubusercontent.com/kubestellar/kubestellar/v0.23.0/scripts/create-kind-cluster-with-SSL-passthrough.sh</code></a> that can be fed directly into <code>bash</code> and will create a <code>kind</code> cluster and initialize it as the KubeFlex hosting cluster. This script accepts the following command line flags.</p>
+<ul>
+<li><code>--name name</code>: set a specific name of the kind cluster (default: kubestellar).</li>
+<li><code>--port port</code>: map the specified host port to the kind cluster port 443 (default: 9443).</li>
+<li><code>--nowait</code>: when given, the script proceeds without waiting for the nginx ingress patching to complete.</li>
+<li><code>--nosetcontext</code>: when given, the script does not change the current kubectl context to the newly created cluster.</li>
+<li><code>-X</code> enable verbose execution of the script for debugging.</li>
+</ul>
 <h3 id="create-a-k3d-cluster">Create a k3d cluster<a class="headerlink" href="#create-a-k3d-cluster" title="Permanent link">#</a></h3>
 <ol>
 <li>
@@ -2362,7 +2399,9 @@ SSL passthrough enabled.</p>
 <h4 id="using-an-existing-openshift-cluster-as-the-hosting-cluster">Using an existing OpenShift cluster as the hosting cluster<a class="headerlink" href="#using-an-existing-openshift-cluster-as-the-hosting-cluster" title="Permanent link">#</a></h4>
 <p>When the hosting cluster is an OpenShift cluster, the recipe for registering a WEC with the ITS (<a href="../wec/">to be written</a>) needs to be modified. In the <code>clusteradm</code> command, omit the <code>--force-internal-endpoint-lookup</code> flag. If following <a href="../get-started/#create-and-register-two-workload-execution-clusters">the quickstart commands</a> literally, this means to define <code>flags=""</code> rather than <code>flags="--force-internal-endpoint-lookup"</code>.</p>
 <h3 id="kflex-init-create-kind">kflex init --create-kind<a class="headerlink" href="#kflex-init-create-kind" title="Permanent link">#</a></h3>
-<p>See <a href="#create-and-init-a-kind-cluster-as-hosting-cluster">above</a></p>
+<p>See <a href="#create-and-init-a-kind-cluster-as-hosting-cluster-with-kflex">above</a>.</p>
+<h3 id="curl-to-bash">Curl-to-bash<a class="headerlink" href="#curl-to-bash" title="Permanent link">#</a></h3>
+<p>See <a href="#create-and-init-a-kind-cluster-as-hosting-cluster-with-curl-to-bash-script">above</a>.</p>
 <h3 id="kubestellar-core-helm-chart">KubeStellar core Helm chart<a class="headerlink" href="#kubestellar-core-helm-chart" title="Permanent link">#</a></h3>
 <p>The <a href="../core-chart/">KubeStellar core Helm chart</a> will install the KubeFlex implementation in the cluster that <code>kubectl</code> is configured to access, as well as create ITSes and WDSes.</p>
 
