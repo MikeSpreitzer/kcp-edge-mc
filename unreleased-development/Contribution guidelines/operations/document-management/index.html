@@ -1366,6 +1366,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#supported-aliases-for-our-documentation" class="md-nav__link">
+    Supported aliases for our documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-from-the-branch-named-main" class="md-nav__link">
+    Publishing from the branch named "main"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortcut-urls" class="md-nav__link">
+    Shortcut URLs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#jinja-templating" class="md-nav__link">
     Jinja templating
   </a>
@@ -1404,20 +1425,6 @@
           <li class="md-nav__item">
   <a href="#including-external-markdown" class="md-nav__link">
     Including external markdown
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#supported-aliases-for-our-documentation" class="md-nav__link">
-    Supported aliases for our documentation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#shortcut-urls" class="md-nav__link">
-    Shortcut URLs
   </a>
   
 </li>
@@ -2246,6 +2253,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#supported-aliases-for-our-documentation" class="md-nav__link">
+    Supported aliases for our documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-from-the-branch-named-main" class="md-nav__link">
+    Publishing from the branch named "main"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortcut-urls" class="md-nav__link">
+    Shortcut URLs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#jinja-templating" class="md-nav__link">
     Jinja templating
   </a>
@@ -2284,20 +2312,6 @@
           <li class="md-nav__item">
   <a href="#including-external-markdown" class="md-nav__link">
     Including external markdown
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#supported-aliases-for-our-documentation" class="md-nav__link">
-    Supported aliases for our documentation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#shortcut-urls" class="md-nav__link">
-    Shortcut URLs
   </a>
   
 </li>
@@ -2547,6 +2561,35 @@ Then open a browser to <a href="http://localhost:8000/"><code>http://localhost:8
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>make<span class="w"> </span>serve-docs
 </code></pre></div>
 Then open a browser to <a href="http://localhost:8000/"><code>http://localhost:8000/</code></a></p>
+<h2 id="supported-aliases-for-our-documentation">Supported aliases for our documentation<a class="headerlink" href="#supported-aliases-for-our-documentation" title="Permanent link">#</a></h2>
+<p><code>mike</code> has a concept of aliases. We currently maintain only one alias.</p>
+<ul>
+<li><code>latest</code> (<a href="https://docs.kubestellar.io/latest">https://docs.kubestellar.io/latest</a>), for the latest regular release.</li>
+</ul>
+<p>The publishing workflow updates these aliases. The latest regular release is determined by picking the first version listed by <code>mike list</code> that matches the regexp <code>release-[0-9.]*</code>.</p>
+<h2 id="publishing-from-the-branch-named-main">Publishing from the branch named "main"<a class="headerlink" href="#publishing-from-the-branch-named-main" title="Permanent link">#</a></h2>
+<p>The branch named "main" also gets published as a "version" on the
+website, but with a different name. This is not done by <code>mike</code>
+aliasing, because that only <em>adds</em> a version. The branch named "main"
+is published as the version named "unreleased-development".</p>
+<h2 id="shortcut-urls">Shortcut URLs<a class="headerlink" href="#shortcut-urls" title="Permanent link">#</a></h2>
+<p>We have a few shortcut urls that come in handy when referring others to our project:</p>
+<p><b>note:</b> You need to join our mailing list first to get access to some of the links that follow (<a href="https://kubestellar.io/joinus">https://docs.kubestellar.io/joinus</a>)</p>
+<ul>
+<li><a href="https://kubestellar.io/agenda">https://kubestellar.io/agenda</a> - our community meeting agenda google doc</li>
+<li><a href="https://kubestellar.io/blog">https://kubestellar.io/blog</a> - our medium reading list</li>
+<li><a href="https://kubestellar.io/code">https://kubestellar.io/code</a> - our current GitHub repo (wherever that is)</li>
+<li><a href="https://kubestellar.io/community">https://kubestellar.io/community</a> - our stable docs community page</li>
+<li><a href="https://kubestellar.io/drive">https://kubestellar.io/drive</a> - our google drive</li>
+<li><a href="https://kubestellar.io/joinus">https://kubestellar.io/joinus</a> - our dev mailing list where you join and get our invites</li>
+<li><a href="https://kubestellar.io/join_us">https://kubestellar.io/join_us</a> - also, our dev mailing list</li>
+<li><a href="https://kubestellar.io/linkedin">https://kubestellar.io/linkedin</a> - our linkedin filter (soon, our page)</li>
+<li><a href="https://kubestellar.io/tv">https://kubestellar.io/tv</a> - our youtube channel</li>
+<li><a href="https://kubestellar.io/tv">https://kubestellar.io/youtube</a> - also, our youtube channel</li>
+<li><a href="https://kubestellar.io/infomercial">https://kubestellar.io/infomercial</a> - our infomercial that premieres on June 12th at 9am</li>
+</ul>
+<p>and.. the very important…
+- <a href="https://kubestellar.io/quickstart">https://kubestellar.io/quickstart</a> - our 'stable' quickstart</p>
 <h2 id="jinja-templating">Jinja templating<a class="headerlink" href="#jinja-templating" title="Permanent link">#</a></h2>
 <p>Our documentation stack includes <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja</a>. The Jinja constructs --- {# comment #}, {{ expr }}, and {&#37; statment &#37;} --- can appear in the markdown sources.</p>
 <h2 id="file-structure">File structure<a class="headerlink" href="#file-structure" title="Permanent link">#</a></h2>
@@ -2643,30 +2686,6 @@ The section which begins with <strong>nav:</strong> lays out the navigation stru
 </figure>
 </p>
 <p>for more information on the 'include-markdown' plugin for mkdocs look <a href="https://github.com/mondeja/mkdocs-include-markdown-plugin">here</a></p>
-<h3 id="supported-aliases-for-our-documentation">Supported aliases for our documentation<a class="headerlink" href="#supported-aliases-for-our-documentation" title="Permanent link">#</a></h3>
-<p><code>mike</code> has a concept of aliases. We currently maintain only one alias.</p>
-<ul>
-<li><code>latest</code> (<a href="https://docs.kubestellar.io/latest">https://docs.kubestellar.io/latest</a>), for the latest regular release.</li>
-</ul>
-<p>The publishing workflow updates these aliases. The latest regular release is determined by picking the first version listed by <code>mike list</code> that matches the regexp <code>release-[0-9.]*</code>.</p>
-<h3 id="shortcut-urls">Shortcut URLs<a class="headerlink" href="#shortcut-urls" title="Permanent link">#</a></h3>
-<p>We have a few shortcut urls that come in handy when referring others to our project:</p>
-<p><b>note:</b> You need to join our mailing list first to get access to some of the links that follow (<a href="https://kubestellar.io/joinus">https://docs.kubestellar.io/joinus</a>)</p>
-<ul>
-<li><a href="https://kubestellar.io/agenda">https://kubestellar.io/agenda</a> - our community meeting agenda google doc</li>
-<li><a href="https://kubestellar.io/blog">https://kubestellar.io/blog</a> - our medium reading list</li>
-<li><a href="https://kubestellar.io/code">https://kubestellar.io/code</a> - our current GitHub repo (wherever that is)</li>
-<li><a href="https://kubestellar.io/community">https://kubestellar.io/community</a> - our stable docs community page</li>
-<li><a href="https://kubestellar.io/drive">https://kubestellar.io/drive</a> - our google drive</li>
-<li><a href="https://kubestellar.io/joinus">https://kubestellar.io/joinus</a> - our dev mailing list where you join and get our invites</li>
-<li><a href="https://kubestellar.io/join_us">https://kubestellar.io/join_us</a> - also, our dev mailing list</li>
-<li><a href="https://kubestellar.io/linkedin">https://kubestellar.io/linkedin</a> - our linkedin filter (soon, our page)</li>
-<li><a href="https://kubestellar.io/tv">https://kubestellar.io/tv</a> - our youtube channel</li>
-<li><a href="https://kubestellar.io/tv">https://kubestellar.io/youtube</a> - also, our youtube channel</li>
-<li><a href="https://kubestellar.io/infomercial">https://kubestellar.io/infomercial</a> - our infomercial that premieres on June 12th at 9am</li>
-</ul>
-<p>and.. the very important…
-- <a href="https://kubestellar.io/quickstart">https://kubestellar.io/quickstart</a> - our 'stable' quickstart</p>
 <h3 id="codeblocks">Codeblocks<a class="headerlink" href="#codeblocks" title="Permanent link">#</a></h3>
 <p>mkdocs has some very helpful ways to include blocks of code in a style that makes it clear to our readers that console interaction is necessary in the documentation.  There are options to include a plain codeblock (```), shell (shell), console (console - no used in our documentation), language or format-specific (yaml, etc.), and others.  For more detailed information, checkout the <a href="https://squidfunk.github.io/mkdocs-material/reference/code-blocks/">mkdocs information on codeblocks</a>.</p>
 <p><strong>NOTE</strong>: the docs-ecutable technology does <em>not</em> apply Jinja, at any stage; Jinja source inside executed code blocks will not be expanded by Jinja but rather seen directly by <code>bash</code>.</p>
