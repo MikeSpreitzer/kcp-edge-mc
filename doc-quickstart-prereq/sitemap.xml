@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/readme/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/readme/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Community/_index/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Community/_index/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Community/partners/argocd/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Community/partners/argocd/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Community/partners/fluxcd/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Community/partners/fluxcd/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Community/partners/kyverno/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Community/partners/kyverno/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Community/partners/mvi/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Community/partners/mvi/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Community/partners/openziti/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Community/partners/openziti/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Community/partners/turbonomic/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Community/partners/turbonomic/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Contribution%20guidelines/CONTRIBUTING/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Contribution%20guidelines/CONTRIBUTING/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Contribution%20guidelines/LICENSE/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Contribution%20guidelines/LICENSE/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Contribution%20guidelines/coc/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Contribution%20guidelines/coc/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Contribution%20guidelines/governance/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Contribution%20guidelines/governance/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Contribution%20guidelines/onboarding/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Contribution%20guidelines/onboarding/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Contribution%20guidelines/operations/all-macros/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Contribution%20guidelines/operations/all-macros/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Contribution%20guidelines/operations/code-management/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Contribution%20guidelines/operations/code-management/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Contribution%20guidelines/operations/document-management/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Contribution%20guidelines/operations/document-management/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Contribution%20guidelines/operations/testing-doc-prs/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Contribution%20guidelines/operations/testing-doc-prs/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Contribution%20guidelines/security/security/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Contribution%20guidelines/security/security/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/Contribution%20guidelines/security/security_contacts/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/Contribution%20guidelines/security/security_contacts/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/common-subs/coming-soon/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/common-subs/coming-soon/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/common-subs/placeholder/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/common-subs/placeholder/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/architecture/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/architecture/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/best-practices/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/best-practices/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/binding/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/binding/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/combined-status/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/combined-status/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/commission-workloads/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/commission-workloads/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/common-setup-core-chart/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/common-setup-core-chart/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/common-setup-intro/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/common-setup-intro/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/common-setup-kind/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/common-setup-kind/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/common-setup-step-by-step/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/common-setup-step-by-step/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/contribute/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/contribute/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/contributor/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/contributor/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/control/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/control/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/core-chart/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/core-chart/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/deploy-on-k3d/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/deploy-on-k3d/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/example-scenarios/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/example-scenarios/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/example-wecs/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/example-wecs/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/examples/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/examples/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/galaxy-intro/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/galaxy-intro/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/get-started/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/get-started/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/hosting-cluster/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/hosting-cluster/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/its-and-wds/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/its-and-wds/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/kubeflex-intro/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/kubeflex-intro/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/microshift/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/microshift/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/misc-files/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/misc-files/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/packaging/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/packaging/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/pre-reqs/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/pre-reqs/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/release-notes/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/release-notes/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/release-testing/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/release-testing/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/release/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/release/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/thirdparties/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/thirdparties/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/transforming/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/transforming/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/usage-basics/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/usage-basics/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/usage-notes/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/usage-notes/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/wec/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/wec/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-quickstart-prereq/direct/images/image-files-readme/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-quickstart-prereq/en/direct/images/image-files-readme/"/>
+         
+    </url>
+</urlset>
