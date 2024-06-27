@@ -183,13 +183,6 @@
          
     </url>
     <url>
-         <loc>https://docs.kubestellar.io/doc-chop/direct/common-setup-kind/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-chop/en/direct/common-setup-kind/"/>
-         
-    </url>
-    <url>
          <loc>https://docs.kubestellar.io/doc-chop/direct/contribute/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
