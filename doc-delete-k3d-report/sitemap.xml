@@ -148,13 +148,6 @@
          
     </url>
     <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/common-subs/placeholder/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/common-subs/placeholder/"/>
-         
-    </url>
-    <url>
          <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
@@ -176,45 +169,10 @@
          
     </url>
     <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/binding/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/binding/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/combined-status/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/combined-status/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/commission-workloads/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/commission-workloads/"/>
-         
-    </url>
-    <url>
          <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/common-setup-core-chart/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/common-setup-core-chart/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/common-setup-intro/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/common-setup-intro/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/common-setup-kind/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/common-setup-kind/"/>
          
     </url>
     <url>
@@ -225,13 +183,6 @@
          
     </url>
     <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/contribute/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/contribute/"/>
-         
-    </url>
-    <url>
          <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/contributor/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
@@ -239,24 +190,10 @@
          
     </url>
     <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/control/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/control/"/>
-         
-    </url>
-    <url>
          <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/core-chart/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/core-chart/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/example-scenarios/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/example-scenarios/"/>
          
     </url>
     <url>
@@ -274,20 +211,6 @@
          
     </url>
     <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/galaxy-intro/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/galaxy-intro/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/get-started/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/get-started/"/>
-         
-    </url>
-    <url>
          <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/hosting-cluster/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
@@ -295,31 +218,10 @@
          
     </url>
     <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/its-and-wds/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/its-and-wds/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/kubeflex-intro/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/kubeflex-intro/"/>
-         
-    </url>
-    <url>
          <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/microshift/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/microshift/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/misc-files/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/misc-files/"/>
          
     </url>
     <url>
@@ -365,38 +267,17 @@
          
     </url>
     <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/transforming/</loc>
+         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/user-guide/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/transforming/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/user-guide/"/>
          
     </url>
     <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/usage-basics/</loc>
+         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/images/png-files-readme/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/usage-basics/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/usage-notes/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/usage-notes/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/wec/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/wec/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-delete-k3d-report/direct/images/image-files-readme/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/images/image-files-readme/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-delete-k3d-report/en/direct/images/png-files-readme/"/>
          
     </url>
 </urlset>
