@@ -650,16 +650,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#before-you-begin" class="md-nav__link">
-    Before You Begin
+  <a href="#install-software-prerequisites" class="md-nav__link">
+    Install software prerequisites
   </a>
   
-    <nav class="md-nav" aria-label="Before You Begin">
+    <nav class="md-nav" aria-label="Install software prerequisites">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#delete-debris-from-preivous-trials" class="md-nav__link">
-    Delete debris from preivous trials
+  <a href="#cleanup-from-previous-runs" class="md-nav__link">
+    Cleanup from previous runs
   </a>
   
 </li>
@@ -807,16 +807,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#before-you-begin" class="md-nav__link">
-    Before You Begin
+  <a href="#install-software-prerequisites" class="md-nav__link">
+    Install software prerequisites
   </a>
   
-    <nav class="md-nav" aria-label="Before You Begin">
+    <nav class="md-nav" aria-label="Install software prerequisites">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#delete-debris-from-preivous-trials" class="md-nav__link">
-    Delete debris from preivous trials
+  <a href="#cleanup-from-previous-runs" class="md-nav__link">
+    Cleanup from previous runs
   </a>
   
 </li>
@@ -2238,16 +2238,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#before-you-begin" class="md-nav__link">
-    Before You Begin
+  <a href="#install-software-prerequisites" class="md-nav__link">
+    Install software prerequisites
   </a>
   
-    <nav class="md-nav" aria-label="Before You Begin">
+    <nav class="md-nav" aria-label="Install software prerequisites">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#delete-debris-from-preivous-trials" class="md-nav__link">
-    Delete debris from preivous trials
+  <a href="#cleanup-from-previous-runs" class="md-nav__link">
+    Cleanup from previous runs
   </a>
   
 </li>
@@ -2326,19 +2326,20 @@
 <h1 id="kubestellar-quickstart-setup">KubeStellar Quickstart Setup<a class="headerlink" href="#kubestellar-quickstart-setup" title="Permanent link">#</a></h1>
 <p>This Quick Start outlines step 1, shows a concrete example of steps 2--7 in the <a href="../usage-basics/">Installation and Usage outline</a>, and forwards you to one example of the remaining steps. In this example you will create three new <code>kind</code> clusters to serve as your KubeFlex hosting cluster and two WECs.</p>
 <ol>
-<li>Before you begin, prepare your system (get the software prerequisites)</li>
+<li>Install software prerequisites</li>
+<li>Cleanup from previous runs</li>
 <li>Create the KubeFlex hosting cluster and Kubestellar core components</li>
 <li>Create and register two WECs.</li>
 <li>Use KubeStellar to distribute a Deployment object to the two WECs.</li>
 </ol>
 <hr />
-<h2 id="before-you-begin">Before You Begin<a class="headerlink" href="#before-you-begin" title="Permanent link">#</a></h2>
+<h2 id="install-software-prerequisites">Install software prerequisites<a class="headerlink" href="#install-software-prerequisites" title="Permanent link">#</a></h2>
 <p>The following command will check for the prerequisites that you will need for this quickstart. See <a href="../pre-reqs/">the prerequisites doc</a> for more details.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bash<span class="w"> </span>&lt;<span class="o">(</span>curl<span class="w"> </span>https://raw.githubusercontent.com/kubestellar/kubestellar/v0.23.0/hack/check_pre_req.sh<span class="o">)</span><span class="w"> </span>kflex<span class="w"> </span>ocm<span class="w"> </span>helm<span class="w"> </span>kubectl<span class="w"> </span>docker<span class="w"> </span>kind
 </code></pre></div>
 <p>This quickstart uses <a href="https://kind.sigs.k8s.io/">kind</a> to create three Kubernetes cluster on your machine.
 Note that <code>kind</code> does not support three or more concurrent clusters unless you raise some limits as described in this <code>kind</code> "known issue": <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files">Pod errors due to “too many open files”</a>.</p>
-<h3 id="delete-debris-from-preivous-trials">Delete debris from preivous trials<a class="headerlink" href="#delete-debris-from-preivous-trials" title="Permanent link">#</a></h3>
+<h3 id="cleanup-from-previous-runs">Cleanup from previous runs<a class="headerlink" href="#cleanup-from-previous-runs" title="Permanent link">#</a></h3>
 <p>If you have run this quickstart or any related recipe previously then
 you will first want to remove any related debris. The following
 commands tear down the state established by this quickstart.</p>
