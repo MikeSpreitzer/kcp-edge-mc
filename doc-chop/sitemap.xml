@@ -155,13 +155,6 @@
          
     </url>
     <url>
-         <loc>https://docs.kubestellar.io/doc-chop/direct/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-chop/en/direct/"/>
-         
-    </url>
-    <url>
          <loc>https://docs.kubestellar.io/doc-chop/direct/architecture/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
@@ -271,13 +264,6 @@
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-chop/en/direct/kubeflex-intro/"/>
-         
-    </url>
-    <url>
-         <loc>https://docs.kubestellar.io/doc-chop/direct/microshift/</loc>
-         <lastmod>2024-06-27</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-chop/en/direct/microshift/"/>
          
     </url>
     <url>
