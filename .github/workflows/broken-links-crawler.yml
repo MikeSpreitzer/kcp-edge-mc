@@ -1,14 +1,25 @@
 name: Broken Links Crawler
 run-name: Broken Links Crawler - ${{ github.ref_name }}
 
+env:
+  PASSED_BRANCH: ${{ inputs.branch }}
+
 on:
   # So we can trigger manually if needed
   workflow_dispatch:
-  # To confirm any changes to docs build successfully, without deploying them
-  workflow_run:
-    workflows: ["Generate and push docs"]
-    types:
-      - completed
+    inputs:
+      branch:
+        required: true
+        type: string
+        description: the branch to be translated to the version to check
+
+  # Normal use is being called on a particular branch
+  workflow_call:
+    inputs:
+      branch:
+        required: true
+        type: string
+        description: the branch to be translated to the version to check
 
 permissions:
   contents: write
@@ -23,6 +34,7 @@ jobs:
       - run: echo "event type is:" ${{ github.repository }}
       - run: echo "GITHUB_REF=<$GITHUB_REF>"
       - run: echo "GITHUB_REPOSITORY=<$GITHUB_REPOSITORY>"
+      - run: echo "PASSED_BRANCH=<$PASSED_BRANCH>"
 
   broken-links-crawler:
     name: broken-links-crawler
@@ -32,7 +44,7 @@ jobs:
       - name: get workflow_dispatch branch name
         shell: bash
         run: |
-            branch="${GITHUB_REF##*/}"
+            branch="$PASSED_BRANCH"
             echo "branch=$branch" >> $GITHUB_OUTPUT
             if [ "$branch" == main ]
             then version=unreleased-development
