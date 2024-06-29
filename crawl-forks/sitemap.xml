@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/readme/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/readme/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Community/_index/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Community/_index/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Community/partners/argocd/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Community/partners/argocd/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Community/partners/fluxcd/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Community/partners/fluxcd/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Community/partners/kyverno/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Community/partners/kyverno/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Community/partners/mvi/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Community/partners/mvi/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Community/partners/openziti/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Community/partners/openziti/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Community/partners/turbonomic/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Community/partners/turbonomic/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Contribution%20guidelines/CONTRIBUTING/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Contribution%20guidelines/CONTRIBUTING/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Contribution%20guidelines/LICENSE/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Contribution%20guidelines/LICENSE/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Contribution%20guidelines/coc/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Contribution%20guidelines/coc/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Contribution%20guidelines/governance/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Contribution%20guidelines/governance/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Contribution%20guidelines/onboarding/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Contribution%20guidelines/onboarding/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Contribution%20guidelines/operations/all-macros/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Contribution%20guidelines/operations/all-macros/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Contribution%20guidelines/operations/code-management/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Contribution%20guidelines/operations/code-management/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Contribution%20guidelines/operations/document-management/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Contribution%20guidelines/operations/document-management/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Contribution%20guidelines/operations/testing-doc-prs/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Contribution%20guidelines/operations/testing-doc-prs/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Contribution%20guidelines/security/security/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Contribution%20guidelines/security/security/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/Contribution%20guidelines/security/security_contacts/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/Contribution%20guidelines/security/security_contacts/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/common-subs/coming-soon/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/common-subs/coming-soon/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/common-subs/placeholder/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/common-subs/placeholder/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/acquire-hosting-cluster/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/acquire-hosting-cluster/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/architecture/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/architecture/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/argo-to-wds1/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/argo-to-wds1/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/best-practices/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/best-practices/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/binding/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/binding/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/combined-status/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/combined-status/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/contribute/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/contribute/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/contributor/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/contributor/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/control/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/control/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/core-chart/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/core-chart/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/example-scenarios/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/example-scenarios/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/example-wecs/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/example-wecs/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/galaxy-intro/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/galaxy-intro/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/get-started/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/get-started/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/init-hosting-cluster/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/init-hosting-cluster/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/its/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/its/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/kubeflex-intro/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/kubeflex-intro/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/packaging/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/packaging/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/pre-reqs/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/pre-reqs/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/release-notes/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/release-notes/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/release-testing/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/release-testing/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/release/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/release/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/transforming/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/transforming/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/user-guide-intro/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/user-guide-intro/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/wds/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/wds/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/wec-registration/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/wec-registration/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/wec/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/wec/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/crawl-forks/direct/images/image-files-readme/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/crawl-forks/en/direct/images/image-files-readme/"/>
+         
+    </url>
+</urlset>
