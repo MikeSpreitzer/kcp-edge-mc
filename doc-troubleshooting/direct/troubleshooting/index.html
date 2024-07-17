@@ -2076,9 +2076,9 @@
 <p>This guide is a work in progress.</p>
 <h2 id="things-to-look-at">Things to look at<a class="headerlink" href="#things-to-look-at" title="Permanent link">#</a></h2>
 <ul>
-<li>Remember that for each of your BindingPolicy objects, there is a corresponding Binding object that reports what matched the policy object.</li>
+<li>Remember that for each of your BindingPolicy objects, there is a corresponding Binding object that reports what is matching the policy object.</li>
 <li>Although not part of the interface, when debugging you can look at the ManifestWork and WorkStatus objects in the ITS.</li>
-<li>Look at logs of controllers. If they have had container restarts that look relevant, look also at the previous logs.</li>
+<li>Look at logs of controllers. If they have had container restarts that look relevant, look also at the previous logs. Do not forget OCM controllers.</li>
 <li>If a controller's <code>-v</code> is not at least 4, increase it.</li>
 <li>Remember that Kubernetes controllers tend to report transient problems as errors without making it clear that the problem is transient and tend to not make it clear if/when the problem has been resolved (sigh).</li>
 </ul>
