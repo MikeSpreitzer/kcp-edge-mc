@@ -2,364 +2,364 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/readme/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/readme/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Community/_index/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Community/_index/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Community/partners/argocd/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Community/partners/argocd/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Community/partners/fluxcd/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Community/partners/fluxcd/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Community/partners/kyverno/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Community/partners/kyverno/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Community/partners/mvi/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Community/partners/mvi/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Community/partners/openziti/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Community/partners/openziti/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Community/partners/turbonomic/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Community/partners/turbonomic/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Contribution%20guidelines/CONTRIBUTING/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Contribution%20guidelines/CONTRIBUTING/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Contribution%20guidelines/LICENSE/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Contribution%20guidelines/LICENSE/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Contribution%20guidelines/coc/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Contribution%20guidelines/coc/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Contribution%20guidelines/governance/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Contribution%20guidelines/governance/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Contribution%20guidelines/onboarding/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Contribution%20guidelines/onboarding/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Contribution%20guidelines/operations/code-management/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Contribution%20guidelines/operations/code-management/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Contribution%20guidelines/operations/document-management/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Contribution%20guidelines/operations/document-management/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Contribution%20guidelines/operations/testing-doc-prs/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Contribution%20guidelines/operations/testing-doc-prs/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Contribution%20guidelines/security/security/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Contribution%20guidelines/security/security/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/Contribution%20guidelines/security/security_contacts/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/Contribution%20guidelines/security/security_contacts/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/common-subs/coming-soon/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/common-subs/coming-soon/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/common-subs/placeholder/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/common-subs/placeholder/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/acquire-hosting-cluster/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/acquire-hosting-cluster/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/architecture/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/architecture/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/argo-to-wds1/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/argo-to-wds1/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/binding/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/binding/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/combined-status/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/combined-status/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/contribute/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/contribute/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/contributor/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/contributor/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/control/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/control/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/core-chart/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/core-chart/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/example-scenarios/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/example-scenarios/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/example-wecs/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/example-wecs/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/galaxy-intro/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/galaxy-intro/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/get-started/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/get-started/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/init-hosting-cluster/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/init-hosting-cluster/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/its/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/its/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/kubeflex-intro/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/kubeflex-intro/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/packaging/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/packaging/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/pre-reqs/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/pre-reqs/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/release-notes/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/release-notes/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/release-testing/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/release-testing/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/release/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/release/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/setup-limitations/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/setup-limitations/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/setup-overview/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/setup-overview/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/transforming/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/transforming/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/troubleshooting/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/troubleshooting/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/usage-limitations/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/usage-limitations/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/user-guide-intro/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/user-guide-intro/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/wds/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/wds/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/wec-registration/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/wec-registration/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/wec/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/wec/"/>
          
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-troubleshooting/direct/images/image-files-readme/</loc>
-         <lastmod>2024-07-17</lastmod>
+         <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-troubleshooting/en/direct/images/image-files-readme/"/>
          
