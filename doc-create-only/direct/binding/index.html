@@ -2181,9 +2181,9 @@
 <h1 id="binding-workload-with-wec">Binding workload with WEC<a class="headerlink" href="#binding-workload-with-wec" title="Permanent link">#</a></h1>
 <p>This document is about associating WECs with workload objects. The
 primary concept is sometimes called "downsync", which confusingly
-refers to both the propagation and transformation of desired state
-from core to WECs <em>and</em> the propagation and summarization of reported
-state from WECs to core.</p>
+refers to both the propagation and <a href="../transforming/">transformation</a>
+of desired state from core to WECs <em>and</em> the propagation and
+summarization of reported state from WECs to core.</p>
 <h2 id="binding-basics">Binding Basics<a class="headerlink" href="#binding-basics" title="Permanent link">#</a></h2>
 <p>The user controls downsync primarily through API objects of kinds
 <code>BindingPolicy</code> and <code>Binding</code>. These go in a WDS and associate
@@ -2205,17 +2205,18 @@ primary function of the <code>BindingPolicy</code> is to assert the desired
 association between those two. A <code>BindingPolicy</code> can also add some
 modulations on how those workload objects are downsynced to/from those
 WECs.</p>
-<p>The WEC-selecting predicate is a label selector in
-<code>spec.clusterSelectors</code>. This label selector tests the labels of the
+<p>The WEC-selecting predicate is an array of label selectors in
+<code>spec.clusterSelectors</code>. These label selectors test the labels of the
 inventory objects describing the WECs. The bound WECs are the ones
-whose inventory object passes the label selector.</p>
+whose inventory object passes at least one of the the label selectors
+in <code>spec.clusterSelectors</code>.</p>
 <p>The workload object selection predicate is in <code>spec.downsync</code>, which
 holds a list of <code>DownsyncPolicyClause</code>s; each includes both a workload
 object selection predicate and also two kinds of information that
 modulate the downsync.</p>
 <p>The workload object selection part of a <code>DownsyncPolicyClause</code>
 consists of the following fields, all of which are optional. A
-workload object matches a <code>DownsyncPolicyClauses</code> if that object
+workload object matches a <code>DownsyncPolicyClause</code> if that object
 matches all of these selection fields; the default value for each
 field specifies a test that every object passes. The KubeStellar
 control objects implicitly never match (TODO: also talk about the
@@ -2229,8 +2230,8 @@ other objects that never match).</p>
 </li>
 <li>
 <p><code>resources</code>: an array of strings containing names of Kubernetes
-  "resources". <strong>BEWARE</strong>: The Kubernetes world is schizophrenic
-  regarding the word "resource". In much --- but not all --- of the
+  "resources". <strong>BEWARE</strong>: The Kubernetes world is inconsistent in its
+  usage of the word "resource". In much --- but not all --- of the
   code, the word "resource" is roughly analogous to a "kind" of object
   --- and specifically <em>not</em> an individual object. In some of the code
   and much of the documentation, the word "resource" refers to an
@@ -2238,8 +2239,8 @@ other objects that never match).</p>
   which the word "resource" means anything with a URI/URL (Kubernetes
   object kinds <em>and</em> individuals both have URLs). In this position in
   KubeStellar we take the first view: by "resource" here we mean the
-  Kubernetes concept that is roughly analogous to "kind" but the names
-  are lowercase and plural. Examples of resources and <code>namespaces</code> and
+  Kubernetes concept that is roughly analogous to "kind" and the names
+  are lowercase and plural. Examples of resources are <code>namespaces</code> and
   <code>deployments</code>. KubeStellar also allows this list to include <code>*</code>
   meaning to match every resource; in this case the list should <em>only</em>
   contain that value. The empty array --- which is the default value
@@ -2289,8 +2290,9 @@ modulate the downsync.</p>
 <p><code>createOnly</code>: a boolean that, when true, suppresses on-going
   maintenance of the object in the WEC. When this boolean is <code>true</code>,
   KubeStellar will only (a) create the object in the WEC if the
-  object's presence is desired and (b) delete the object from the WEC
-  when the object's presence is not desired. This is a blunt
+  object's presence is desired but the object is not yet present there
+  and (b) delete the object from the WEC when the object's presence is
+  not desired but the object currently exists there. This is a blunt
   instrument for coping with objects that that have conflicting
   authorities writing to the WDS and to the WEC. <code>Job</code> objects are an
   example. The application arm of OCM --- which KubeStellar currently
@@ -2300,12 +2302,12 @@ modulate the downsync.</p>
   content (e.g., the pod selector, which the user should not supply)
   to the <code>spec</code>. Without the <code>createOnly</code> option, there would be a
   controller fight between OCM transport and the WEC's normal
-  behavior; this controller fight is observed to wedge the OCM
+  behavior; this controller fight is known to wedge the OCM
   transport's handling associated with the relevant <code>Binding</code>. <em>With</em>
-  <code>createOnly</code>, the controller fight is called off --- the OCM
-  transport will <em>not</em> modify the <code>spec</code> of a <code>Job</code> object that exists
-  in the WEC. <strong>NOTE</strong>: this behavior is not implemented yet --- DO
-  NOT RELY ON IT.</p>
+  <code>createOnly</code>, the controller fight is called off: the OCM transport
+  will <em>not</em> modify the <code>spec</code> of a <code>Job</code> object that already exists
+  in the WEC. <strong>NOTE</strong>: <code>createOnly: true</code> is not fully supported yet
+  --- DO NOT RELY ON IT.</p>
 </li>
 </ul>
 <p>When multiple <code>DownsyncPolicyClause</code> of one <code>BindingPolicy</code> match a
@@ -2320,10 +2322,10 @@ composing the corresponding <code>Binding</code> object.</p>
 an expectation that only one WEC matches the WEC selection predicate
 and (b) for each selected workload object, the reported state from the
 one WEC should be propagated back to the workload object in the
-WDS. <strong>NOTE</strong>: regarding the question of what this setting means when
-multiple <code>BindingPolicy</code> objects select a given workload object, the
-implementation is in flux and the user should not present this
-situation.</p>
+WDS. <strong>NOTE</strong>: regarding the questions of what this setting means when
+multiple <code>BindingPolicy</code> objects select a given workload object and/or
+when multiple WECs are selected, the implementation is in flux and the
+user should not present such situations.</p>
 <p>Following is an example of a <code>BindingPolicy</code> object, used in the
 end-to-end test of <code>createOnly</code> functionality.</p>
 <div class="language-yaml highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">control.kubestellar.io/v1alpha1</span>
