@@ -2202,7 +2202,7 @@ about that.</p>
 subset of the WECs in the inventory of the ITS associated with the WDS
 and (2) identify a subset of the workload objects in the WDS. The
 primary function of the <code>BindingPolicy</code> is to assert the desired
-association between those two. A <code>BindingPolicy</code> can also add some
+association between (1) and (2). A <code>BindingPolicy</code> can also add some
 modulations on how those workload objects are downsynced to/from those
 WECs.</p>
 <p>The WEC-selecting predicate is an array of label selectors in
@@ -2218,8 +2218,10 @@ modulate the downsync.</p>
 consists of the following fields, all of which are optional. A
 workload object matches a <code>DownsyncPolicyClause</code> if that object
 matches all of these selection fields; the default value for each
-field specifies a test that every object passes. The KubeStellar
-control objects implicitly never match (TODO: also talk about the
+field specifies a test that every object passes. Note, however, that
+not every API object in a WDS is considered to be a <em>workload</em>
+object. The KubeStellar control objects and <code>CombinedStatus</code> objects
+are not considered to be workload objects. (TODO: also talk about the
 other objects that never match).</p>
 <ul>
 <li>
