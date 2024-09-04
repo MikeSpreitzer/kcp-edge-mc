@@ -863,9 +863,16 @@
 <nav aria-label="OCM Transport Plugin" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ocm-transport-container-image">
+<a class="md-nav__link" href="#ocm-transport-controller-container-image">
 <span class="md-ellipsis">
-      OCM Transport container image
+      OCM Transport Controller container image
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ocm-transport-controller-helm-chart">
+<span class="md-ellipsis">
+      OCM Transport Controller Helm chart
     </span>
 </a>
 </li>
@@ -1297,9 +1304,16 @@
 <nav aria-label="OCM Transport Plugin" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ocm-transport-container-image">
+<a class="md-nav__link" href="#ocm-transport-controller-container-image">
 <span class="md-ellipsis">
-      OCM Transport container image
+      OCM Transport Controller container image
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ocm-transport-controller-helm-chart">
+<span class="md-ellipsis">
+      OCM Transport Controller Helm chart
     </span>
 </a>
 </li>
@@ -1517,10 +1531,13 @@ prints.</p>
 <p>The OCM Status Add-On Controller is delivered by a Helm chart at <a href="https://github.com/orgs/kubestellar/packages/container/package/ocm-status-addon-chart">ghcr.io/kubestellar/ocm-status-addon-chart</a>. The chart references the container image.</p>
 <p>By our development practices and doing doing any manual hacks, we maintain the association that the OCI image tagged <code>v$VERSION</code> contains a Helm chart that declares its <code>version</code> and its <code>appVersion</code> to be <code>v$VERSION</code> and the templates in that chart include a Deployment for the OCM Status Add-On Agent using the container image <code>ghcr.io/kubestellar/ocm-status-addon:$VERSION</code>.</p>
 <h2 id="ocm-transport-plugin">OCM Transport Plugin<a class="headerlink" href="#ocm-transport-plugin" title="Permanent link">#</a></h2>
-<p>The source is the GitHub repo <a href="https://github.com/kubestellar/ocm-transport-plugin">github.com/kubestellar/ocm-transport-plugin</a></p>
-<h3 id="ocm-transport-container-image">OCM Transport container image<a class="headerlink" href="#ocm-transport-container-image" title="Permanent link">#</a></h3>
-<p>This appears at <a href="https://github.com/kubestellar/ocm-transport-plugin/pkgs/container/ocm-transport-plugin%2Ftransport-controller">ghcr.io/kubestellar/ocm-transport-plugin/transport-controller</a>.</p>
+<p>This thing is in the midst of being moved from a separate repository into the kubestellar repository. The separate repository is <a href="https://github.com/kubestellar/ocm-transport-plugin">github.com/kubestellar/ocm-transport-plugin</a>.</p>
+<p>The primary product is the OCM Transport Controller, built from generic transport controller code plus code specific to using OCM for transport.</p>
+<h3 id="ocm-transport-controller-container-image">OCM Transport Controller container image<a class="headerlink" href="#ocm-transport-controller-container-image" title="Permanent link">#</a></h3>
+<p>This appears at <a href="https://github.com/kubestellar/ocm-transport-plugin/pkgs/container/ocm-transport-plugin%2Ftransport-controller">ghcr.io/kubestellar/ocm-transport-plugin/transport-controller</a>. This will need to move to something like <code>ghcr.io/kubestellar/kubestellar/ocm-transport-controller</code>.</p>
 <p>TODO: document how the image is built and published, including explain versioning.</p>
+<h3 id="ocm-transport-controller-helm-chart">OCM Transport Controller Helm chart<a class="headerlink" href="#ocm-transport-controller-helm-chart" title="Permanent link">#</a></h3>
+<p>This appears at <a href="https://github.com/kubestellar/ocm-transport-plugin/pkgs/container/ocm-transport-plugin%2Fchart%2Focm-transport-plugin">ghcr.io/kubestellar/ocm-transport-plugin/chart/ocm-transport-plugin</a>. This will need to move to something like <code>ghcr.io/kubestellar/kubestellar/ocm-transport-controller</code>.</p>
 <h2 id="kubestellar">KubeStellar<a class="headerlink" href="#kubestellar" title="Permanent link">#</a></h2>
 <h3 id="warning">WARNING<a class="headerlink" href="#warning" title="Permanent link">#</a></h3>
 <p>Literal KubeStellar release numbers appear here, and are historical. The version of this document in a given release does not mention that release. See <a href="../release/">the release process</a> for more details on what self-references are and are not handled.</p>
@@ -1528,10 +1545,9 @@ prints.</p>
 <p>The following diagram shows most of it. For simplicity, this omits the clusteradm and the Helm CLI container images.</p>
 <div class="mermaid">flowchart LR
     osa_hc_repo[published OSA Helm Chart]
-    otp_code["OTP source in GitHub"]
     subgraph ks_repo["kubestellar@GitHub"]
     kcm_code[KCM source code]
-    gtc_code["generic transport<br/>controller code"]
+    otc_code[OTC source code]
     kcm_hc_src[KCM Helm chart source]
     ksc_hc_src[KS Core Helm chart source]
     ks_pch[kubestellar PostCreateHook]
@@ -1548,6 +1564,7 @@ prints.</p>
     kcm_hc_repo -.-&gt; kcm_ctr_image
     ks_pch -.-&gt; kcm_hc_repo
     ks_pch -.-&gt; otp_hc_repo[published OTP Helm chart]
+    otp_hc_repo -.-&gt; otc_ctr_image_ur["OTC container image<br/>(original)"]
     ksc_hc_repo[published KS Core chart] --&gt; ksc_hc_src
     ksc_hc_src -.-&gt; osa_hc_repo
     ksc_hc_src -.-&gt; otp_hc_repo
@@ -1563,8 +1580,7 @@ prints.</p>
     e2e_local -.-&gt; ocm_pch
     e2e_local -.-&gt; kcm_code
     e2e_local -.-&gt; kcm_hc_src
-    e2e_local -.-&gt; gtc_code
-    e2e_local -.-&gt; otp_code
+    e2e_local -.-&gt; otc_code
     e2e_local -.-&gt; KubeFlex
     e2e_release -.-&gt; ocm_pch
     e2e_release -.-&gt; ks_pch
@@ -1672,7 +1688,7 @@ built from.</p>
 <p><code>its</code> defines a Job with two containers. One container uses the clusteradm container image to initialize the target cluster as an OCM "hub". The other container uses the Helm CLI container image to instantiate the <a href="#ocm-status-addon-helm-chart">OCM Status Addon Helm chart</a>. The version to use is defined in the <code>values.yaml</code> of the core chart. This PCH is used for every requested ITS.</p>
 </li>
 <li>
-<p><code>wds</code> defines a Job with two containers. One container uses the Helm CLI image to instantiate the <a href="#kubestellar-controller-manager-helm-chart">KubeStellar controller-manager Helm chart</a>. The other container uses the Helm CLI image to instantiate the OCM Transport Helm chart. For both of those subsidiary charts, the version to use is defined in the <code>values.yaml</code> of the core chart. This PCH is used for every requested WDS.</p>
+<p><code>wds</code> defines a Job with two containers. One container uses the Helm CLI image to instantiate the <a href="#kubestellar-controller-manager-helm-chart">KubeStellar controller-manager Helm chart</a>. The other container uses the Helm CLI image to instantiate the <a href="#ocm-transport-controller-helm-chart">OCM Transport Helm chart</a>. For both of those subsidiary charts, the version to use is defined in the <code>values.yaml</code> of the core chart. This PCH is used for every requested WDS.</p>
 </li>
 </ul>
 <p>By our development practices and not doing any manual hacking, we maintain the association that the OCI image tagged <code>$VERSION</code> contains a Helm chart that declares its <code>version</code> and its <code>appVersion</code> to be <code>$VERSION</code> and instantiates version <code>$VERSION</code> of <a href="#kubestellar-controller-manager-helm-chart">the KubeStellar controller-manager Helm chart</a>.</p>
@@ -1717,7 +1733,10 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
 <p>Again, omitting clusteradm and Helm CLI container images for simplicity.</p>
 <p>TODO: finish this</p>
 <div class="mermaid">flowchart LR
-    otp_code["OTP source in GitHub"]
+    subgraph otp_repo["ocm-transport-plugin@GitHub"]
+    otp_code_ur["OTP source code<br/>(original)"]
+    otp_hc_src[OTC Helm chart source]
+    end
     subgraph osa_repo["ocm-status-addon@GitHub"]
     osa_code[OSA source code]
     osa_hc_src[OSA Helm chart source]
@@ -1729,6 +1748,7 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
     subgraph ks_repo["kubestellar@GitHub"]
     kcm_code[KCM source code]
     gtc_code["generic transport<br/>controller code"]
+    otp_code["OTP source code<br/>(moved)"]
     kcm_hc_src[KCM Helm chart source]
     ksc_hc_src[KS Core Helm chart source]
     ks_pch[kubestellar PostCreateHook]
@@ -1746,6 +1766,10 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
     kcm_hc_repo -.-&gt; kcm_ctr_image
     ks_pch -.-&gt; kcm_hc_repo
     ks_pch -.-&gt; otp_hc_repo[published OTP Helm chart]
+    otp_hc_repo -.-&gt; otc_ctr_image_ur["OTC container image<br/>(original)"]
+    otp_hc_repo --&gt; otp_hc_src
+    otc_ctr_image_ur --&gt; gtc_code
+    otc_ctr_image_ur --&gt; otp_code_ur
     ksc_hc_repo[published KS Core chart] --&gt; ksc_hc_src
     ksc_hc_src -.-&gt; osa_hc_repo
     ksc_hc_src -.-&gt; kcm_hc_repo
