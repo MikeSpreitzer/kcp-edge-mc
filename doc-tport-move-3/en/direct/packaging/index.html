@@ -1568,6 +1568,7 @@ prints.</p>
     ks_pch -.-&gt; otp_hc_repo[published OTP Helm chart]
     otc_ctr_image["OTC container image<br/>(moved)"]
     otc_ctr_image --&gt; otc_code
+    otc_hc_src -.-&gt; otc_ctr_image
     otp_hc_repo -.-&gt; otc_ctr_image_ur["OTC container image<br/>(original)"]
     otc_hc_repo[published OTC Helm chart]
     otc_hc_repo --&gt; otc_hc_src
@@ -1751,6 +1752,7 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
     gtc_code["generic transport<br/>controller code"]
     otp_code["OTP source code<br/>(moved)"]
     kcm_hc_src[KCM Helm chart source]
+    otc_hc_src[OTC Helm chart source]
     ksc_hc_src[KS Core Helm chart source]
     ks_pch[kubestellar PostCreateHook]
     ocm_pch["ocm PostCreateHook"]
@@ -1769,10 +1771,14 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
     otc_ctr_image["OTC container image<br/>(moved)"]
     otc_ctr_image --&gt; gtc_code
     otc_ctr_image --&gt; otp_code
+    otc_hc_src -.-&gt; otc_ctr_image
     otp_hc_repo -.-&gt; otc_ctr_image_ur["OTC container image<br/>(original)"]
     otp_hc_repo --&gt; otp_hc_src
     otc_ctr_image_ur --&gt; gtc_code
     otc_ctr_image_ur --&gt; otp_code_ur
+    otc_hc_repo[published OTC Helm chart]
+    otc_hc_repo --&gt; otc_hc_src
+    otc_hc_repo -.-&gt; otc_ctr_image
     ksc_hc_repo[published KS Core chart] --&gt; ksc_hc_src
     ksc_hc_src -.-&gt; osa_hc_repo
     ksc_hc_src -.-&gt; kcm_hc_repo
