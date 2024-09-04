@@ -1564,6 +1564,8 @@ prints.</p>
     kcm_hc_repo -.-&gt; kcm_ctr_image
     ks_pch -.-&gt; kcm_hc_repo
     ks_pch -.-&gt; otp_hc_repo[published OTP Helm chart]
+    otc_ctr_image["OTC container image<br/>(moved)"]
+    otc_ctr_image --&gt; otc_code
     otp_hc_repo -.-&gt; otc_ctr_image_ur["OTC container image<br/>(original)"]
     ksc_hc_repo[published KS Core chart] --&gt; ksc_hc_src
     ksc_hc_src -.-&gt; osa_hc_repo
@@ -1607,9 +1609,6 @@ prints.</p>
     ocm_pch -.-&gt; helm_image
     ocm_pch -.-&gt; cladm_image
     ks_pch -.-&gt; helm_image
-    otc_ctr_image["OTC container image<br/>(moved)"]
-    otc_ctr_image -&gt; gtc_code
-    otc_ctr_image -&gt; otp_code
     ksc_hc_repo[published KS Core chart] --&gt; ksc_hc_src
     ksc_hc_src -.-&gt; helm_image
     ksc_hc_src -.-&gt; cladm_image
@@ -1770,8 +1769,8 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
     ks_pch -.-&gt; kcm_hc_repo
     ks_pch -.-&gt; otp_hc_repo[published OTP Helm chart]
     otc_ctr_image["OTC container image<br/>(moved)"]
-    otc_ctr_image -&gt; gtc_code
-    otc_ctr_image -&gt; otp_code
+    otc_ctr_image --&gt; gtc_code
+    otc_ctr_image --&gt; otp_code
     otp_hc_repo -.-&gt; otc_ctr_image_ur["OTC container image<br/>(original)"]
     otp_hc_repo --&gt; otp_hc_src
     otc_ctr_image_ur --&gt; gtc_code
