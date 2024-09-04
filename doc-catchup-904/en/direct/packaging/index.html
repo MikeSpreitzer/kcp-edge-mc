@@ -1767,6 +1767,7 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
     ks_pch -.-&gt; kcm_hc_repo
     ks_pch -.-&gt; otp_hc_repo[published OTP Helm chart]
     otp_hc_repo -.-&gt; otc_ctr_image[OTC container image]
+    otp_hc_repo --&gt; otp_hc_src
     otc_ctr_image --&gt; gtc_code
     otc_ctr_image --&gt; otp_code_ur
     ksc_hc_repo[published KS Core chart] --&gt; ksc_hc_src
