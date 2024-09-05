@@ -1553,7 +1553,7 @@ prints.</p>
     kcm_hc_repo -.-&gt; kcm_ctr_image
     ks_pch -.-&gt; kcm_hc_repo
     ks_pch -.-&gt; otc_hc_repo[published OTC Helm chart]
-    otc_ctr_image["OTC container image<br/>(moved)"]
+    otc_ctr_image[OTC container image]
     otc_ctr_image --&gt; otc_code
     otc_hc_src -.-&gt; otc_ctr_image
     otc_hc_repo --&gt; otc_hc_src
@@ -1736,7 +1736,7 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
     subgraph ks_repo["kubestellar@GitHub"]
     kcm_code[KCM source code]
     gtc_code["generic transport<br/>controller code"]
-    otp_code["OTP source code<br/>(moved)"]
+    otp_code[OTP source code]
     kcm_hc_src[KCM Helm chart source]
     otc_hc_src[OTC Helm chart source]
     ksc_hc_src[KS Core Helm chart source]
@@ -1754,7 +1754,7 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
     kcm_hc_repo -.-&gt; kcm_ctr_image
     ks_pch -.-&gt; kcm_hc_repo
     ks_pch -.-&gt; otc_hc_repo[published OTC Helm chart]
-    otc_ctr_image["OTC container image<br/>(moved)"]
+    otc_ctr_image[OTC container image]
     otc_ctr_image --&gt; gtc_code
     otc_ctr_image --&gt; otp_code
     otc_hc_src -.-&gt; otc_ctr_image
