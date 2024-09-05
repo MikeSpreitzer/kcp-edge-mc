@@ -2186,15 +2186,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#reacting-to-a-new-ocm-transport-plugin-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reacting to a new ocm-transport-plugin release
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#reacting-to-a-new-ocm-status-addon-release" class="md-nav__link">
     <span class="md-ellipsis">
       Reacting to a new ocm-status-addon release
@@ -2949,15 +2940,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#reacting-to-a-new-ocm-transport-plugin-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reacting to a new ocm-transport-plugin release
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#reacting-to-a-new-ocm-status-addon-release" class="md-nav__link">
     <span class="md-ellipsis">
       Reacting to a new ocm-status-addon release
@@ -3114,19 +3096,6 @@
 clues about the problem.</p>
 <p>Every release should pass all release tests before it can be officially declare as a new stable release. Please see the details in <a href="../release-testing/">release-testing</a>.</p>
 <h2 id="step-by-step">Step-by-Step<a class="headerlink" href="#step-by-step" title="Permanent link">#</a></h2>
-<h3 id="reacting-to-a-new-ocm-transport-plugin-release">Reacting to a new ocm-transport-plugin release<a class="headerlink" href="#reacting-to-a-new-ocm-transport-plugin-release" title="Permanent link">#</a></h3>
-<p>Between each release of <a href="https://github.com/kubestellar/ocm-transport-plugin">ks/OTP</a> and the next release of ks/ks, the following steps should be done in ks/ks.</p>
-<ul>
-<li>
-<p>Edit <code>scripts/deploy-transport-controller.sh</code>: update the tag in the default transport controller image setting (<code>export TRANSPORT_CONTROLLER_IMAGE...</code>) to the latest release of ks/OTP.</p>
-</li>
-<li>
-<p>Edit <code>config/postcreate-hooks/kubestellar.yaml</code>: update the version of the OTP Helm chart.</p>
-</li>
-<li>
-<p>Edit <code>test/e2e/common/setup-kubestellar.sh</code>: update the setting of <code>OCM_TRANSPORT_PLUGIN_RELEASE</code> to the latest.</p>
-</li>
-</ul>
 <h3 id="reacting-to-a-new-ocm-status-addon-release">Reacting to a new ocm-status-addon release<a class="headerlink" href="#reacting-to-a-new-ocm-status-addon-release" title="Permanent link">#</a></h3>
 <p>Between each release of <a href="https://github.com/kubestellar/ocm-status-addon">ks/OSA</a> and the next release of ks/ks, update the references to the ocm-status-addon release in the following files.</p>
 <ul>
@@ -3143,7 +3112,7 @@ clues about the problem.</p>
 <p>Edit <code>docs/mkdocs.yml</code> and update the definition of <code>ks_latest_release</code> to <code>$version</code> (e.g., <code>'0.23.0-rc42'</code>). If this is a regular release then also update the definition of <code>ks_latest_regular_release</code>.</p>
 </li>
 <li>
-<p>Edit the source for the KCM PCH (in <code>config/postcreate-hooks/kubestellar.yaml</code>) and update the tag in the reference to the KCM container image (it appears in the last object, a <code>Job</code>).</p>
+<p>Edit the source for the KCM+OTC PCH (in <code>config/postcreate-hooks/kubestellar.yaml</code>) and update the version used of the KubeStellar controller-manager chart and the OCM transport controller chart (they appear in the last object, a <code>Job</code>).</p>
 </li>
 <li>
 <p>Update the version in the core chart defaults, <code>core-chart/values.yaml</code>.</p>
