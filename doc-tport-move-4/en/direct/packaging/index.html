@@ -1565,12 +1565,10 @@ prints.</p>
     kcm_hc_src -.-&gt; kcm_ctr_image
     kcm_hc_repo -.-&gt; kcm_ctr_image
     ks_pch -.-&gt; kcm_hc_repo
-    ks_pch -.-&gt; otp_hc_repo[published OTP Helm chart]
+    ks_pch -.-&gt; otc_hc_repo[published OTC Helm chart]
     otc_ctr_image["OTC container image<br/>(moved)"]
     otc_ctr_image --&gt; otc_code
     otc_hc_src -.-&gt; otc_ctr_image
-    otp_hc_repo -.-&gt; otc_ctr_image_ur["OTC container image<br/>(original)"]
-    otc_hc_repo[published OTC Helm chart]
     otc_hc_repo --&gt; otc_hc_src
     otc_hc_repo -.-&gt; otc_ctr_image
     ksc_hc_repo[published KS Core chart] --&gt; ksc_hc_src
@@ -1767,16 +1765,16 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
     kcm_hc_src -.-&gt; kcm_ctr_image
     kcm_hc_repo -.-&gt; kcm_ctr_image
     ks_pch -.-&gt; kcm_hc_repo
-    ks_pch -.-&gt; otp_hc_repo[published OTP Helm chart]
+    ks_pch -.-&gt; otc_hc_repo[published OTC Helm chart]
     otc_ctr_image["OTC container image<br/>(moved)"]
     otc_ctr_image --&gt; gtc_code
     otc_ctr_image --&gt; otp_code
     otc_hc_src -.-&gt; otc_ctr_image
     otp_hc_repo -.-&gt; otc_ctr_image_ur["OTC container image<br/>(original)"]
     otp_hc_repo --&gt; otp_hc_src
+    otp_hc_src -.-&gt; otc_ctr_image_ur
     otc_ctr_image_ur --&gt; gtc_code
     otc_ctr_image_ur --&gt; otp_code_ur
-    otc_hc_repo[published OTC Helm chart]
     otc_hc_repo --&gt; otc_hc_src
     otc_hc_repo -.-&gt; otc_ctr_image
     ksc_hc_repo[published KS Core chart] --&gt; ksc_hc_src
