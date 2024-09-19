@@ -105,9 +105,12 @@ kubectl --context "$its_context" get manifestworks -n "$wec2_name"
 
 Verify that the deployment has been created in both clusters
 
-```shell
-kubectl --context "$wec1_context" get deployments -n nginx
-kubectl --context "$wec2_context" get deployments -n nginx
+```console
+bash-3.2$ kubectl --context "$wec1_context" get deployments -n nginx
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+bash-3.2$ kubectl --context "$wec2_context" get deployments -n nginx
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   1/1     1            1           33s
 ```
 
 Please note, in line with Kubernetes’ best practices, the order in which you apply
