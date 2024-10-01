@@ -208,7 +208,7 @@ core-chart: manifests kustomize
 		| sed -e 's/^/  /' \
 		> /tmp/kubestellar-controller-manager.yaml
 	git checkout -- config/manager/kustomization.yaml
-	sed -i -e '/KUBESTELLAR_CONTROLLER_PLACEHOLDER/{r /tmp/kubestellar-controller-manager.yaml' -e 'd}' core-chart/templates/postcreatehooks/wds.yaml
+	cat core-chart-templatesrc/postcreatehooks/wds.yaml | sed -e $$'/KUBESTELLAR_CONTROLLER_PLACEHOLDER/{r /tmp/kubestellar-controller-manager.yaml\n d\n}' > core-chart/templates/postcreatehooks/wds.yaml
 
 # If $(KUBE_CONTEXT) is set then that indicates where to install the chart; otherwise it goes to the current kubeconfig context.
 .PHONY: install-local-core-chart
