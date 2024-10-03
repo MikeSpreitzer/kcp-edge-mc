@@ -1567,8 +1567,7 @@ prints.</p>
     setup_ksc -.-&gt; KubeFlex
     e2e_local -.-&gt; ksc_hc_src
     e2e_local -.-&gt; KubeFlex
-    e2e_release -.-&gt; ocm_pch
-    e2e_release -.-&gt; ks_pch
+    e2e_release -.-&gt; ksc_hc_repo
     e2e_release -.-&gt; KubeFlex</code></pre>
 <p>The following diagram shows the parts involving the clusteradm and Helm CLI container images.</p>
 <pre class="mermaid"><code>flowchart LR
@@ -1764,8 +1763,7 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
     setup_ksc -.-&gt; KubeFlex
     e2e_local -.-&gt; ksc_hc_repo
     e2e_local -.-&gt; KubeFlex
-    e2e_release -.-&gt; ocm_pch
-    e2e_release -.-&gt; ks_pch
+    e2e_release -.-&gt; ksc_hc_repo
     e2e_release -.-&gt; KubeFlex</code></pre>
 <p>Every dotted line is a reference that must be versioned. How do we
 keep all those versions right?</p>
