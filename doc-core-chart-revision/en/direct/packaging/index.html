@@ -1689,7 +1689,7 @@ KubeFlex hosting cluster, as follows.</p>
 </ul>
 <p>By our development practices and not doing any manual hacking, we maintain the association that the OCI image tagged <code>$VERSION</code> contains a Helm chart that declares its <code>version</code> and its <code>appVersion</code> to be <code>$VERSION</code> and instantiates version <code>$VERSION</code> of <a href="#kubestellar-controller-manager-container-image">the KubeStellar controller-manager container image</a> and <a href="#ocm-transport-controller-container-image">the OCM Transport Controller container image</a>.</p>
 <h3 id="kubestellar-controller-manager-helm-chart">KubeStellar controller-manager Helm Chart<a class="headerlink" href="#kubestellar-controller-manager-helm-chart" title="Permanent link">#</a></h3>
-<p><strong>NOTE</strong>: This is not used for anything, but still exists.</p>
+<p><strong>NOTE</strong>: This is not used for anything anymore, but the published OCI images still exist.</p>
 <p>There is a Helm chart that is designed to be instantiated in a KubeFlex hosting cluster, once per WDS. The focus of the chart is getting the KubeStellar controller-manager installed.</p>
 <p>The source for the Helm chart is in
 the <code>chart/</code> directory. <code>make chart</code> (re)derives
@@ -1699,7 +1699,7 @@ it from local sources. This is not included in <code>make all-generated</code>.<
 <code>ghcr.io/kubestellar/kubestellar/controller-manager-chart</code>. A GitHub Actions workflow (in <code>.github/workflows/goreleaser.yml</code>) used to specializ and publish this chart as part of <a href="../release/">the release process</a>.</p>
 <p>By our development practices and not doing any manual hacking, we maintain the association that the OCI image tagged <code>$VERSION</code> contains a Helm chart that declares its <code>version</code> and its <code>appVersion</code> to be <code>$VERSION</code> and that chart has a Deployment that uses the kubestellar-controller-manager container image tagged <code>$VERSION</code>.</p>
 <h3 id="ocm-transport-controller-helm-chart">OCM Transport Controller Helm chart<a class="headerlink" href="#ocm-transport-controller-helm-chart" title="Permanent link">#</a></h3>
-<p><strong>NOTE</strong>: This is not used for anything, but it still exists.</p>
+<p><strong>NOTE</strong>: This is not used for anything anymore, but the published OCI images still exist.</p>
 <p>The <a href="../release/">release process</a> used to package and publish this chart at <a href="https://github.com/kubestellar/kubestellar/pkgs/container/kubestellar%2Focm-transport-controller-chart">ghcr.io/kubestellar/kubestellar/ocm-transport-controller-chart</a>. By our development practices and not doing any manual hacking, we maintain the association that the OCI image tagged <code>$VERSION</code> contains a Helm chart that declares its <code>version</code> and its <code>appVersion</code> to be <code>$VERSION</code> and instantiates version <code>$VERSION</code> of <a href="#ocm-transport-controller-container-image">OCM Transport Controller container image</a>.</p>
 <h3 id="kubeflex-postcreatehooks">KubeFlex PostCreateHooks<a class="headerlink" href="#kubeflex-postcreatehooks" title="Permanent link">#</a></h3>
 <p><strong>NOTE</strong>: These are not used for anything now but still exist.</p>
