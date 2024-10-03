@@ -1722,7 +1722,7 @@ One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantia
 <h4 id="e2e-setup-for-testing-a-release">E2E setup for testing a release<a class="headerlink" href="#e2e-setup-for-testing-a-release" title="Permanent link">#</a></h4>
 <p>When setting up to test a release, the setup script uses the published core Helm chart of the release being tested. That is the latest release as of the script's version.</p>
 <h4 id="e2e-setup-for-testing-local-copyversion">E2E setup for testing local copy/version<a class="headerlink" href="#e2e-setup-for-testing-local-copyversion" title="Permanent link">#</a></h4>
-<p>When setting up to test a release, the setup script uses the local version of the core Helm chart.</p>
+<p>When setting up to test the local copy/version, the setup script uses the local version of the core Helm chart.</p>
 <p>The script builds a local kubestellar controller-manager container image from local sources. Then the script loads that image into the KubeFlex hosting cluster (e.g., using <code>kind load</code>). The script does the same for the OCM transport controller. The core chart is instantiated with settings to use the images just built.</p>
 <h2 id="amalgamated-graph">Amalgamated graph<a class="headerlink" href="#amalgamated-graph" title="Permanent link">#</a></h2>
 <p>Currently only showing kubestellar and ocm-status-addon.</p>
