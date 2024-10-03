@@ -1594,9 +1594,8 @@ prints.</p>
     ksc_hc_src -.-&gt; cladm_image
     ksc_hc_repo -.-&gt; cladm_image
     ksc_hc_repo -.-&gt; helm_image
-    e2e_local -.-&gt; ocm_pch
-    e2e_release -.-&gt; ocm_pch
-    e2e_release -.-&gt; ks_pch</code></pre>
+    e2e_local -.-&gt; ksc_hc_src
+    e2e_release -.-&gt; ksh_hc_repo</code></pre>
 <p>The dashed dependencies are at run time, not build time.</p>
 <p>"KCM" is the KubeStellar controller-manager.</p>
 <p><strong>NOTE</strong>: among the references to published artifacts, some have a
