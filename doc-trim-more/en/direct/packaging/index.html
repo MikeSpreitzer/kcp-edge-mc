@@ -1485,7 +1485,6 @@ prints.</p>
     subgraph ks_repo["kubestellar@GitHub"]
     kcm_code[KCM source code]
     otc_code[OTC source code]
-    otc_hc_src[OTC Helm chart source]
     ksc_hc_src[KS Core Helm chart source]
     setup_ksc["'Getting Started' setup"]
     e2e_local["E2E setup&lt;br&gt;local"]
@@ -1494,7 +1493,6 @@ prints.</p>
     kcm_ctr_image[KCM container image] --&gt; kcm_code
     otc_ctr_image[OTC container image]
     otc_ctr_image --&gt; otc_code
-    otc_hc_src -.-&gt; otc_ctr_image
     ksc_hc_repo[published KS Core chart] --&gt; ksc_hc_src
     ksc_hc_src -.-&gt; osa_hc_repo
     ksc_hc_src -.-&gt; otc_ctr_image
@@ -1654,7 +1652,6 @@ KubeFlex hosting cluster, as follows.</p>
     kcm_code[KCM source code]
     gtc_code["generic transport&lt;br&gt;controller code"]
     otp_code[OTP source code]
-    otc_hc_src[OTC Helm chart source]
     ksc_hc_src[KS Core Helm chart source]
     setup_ksc["'Getting Started' setup"]
     e2e_local["E2E setup&lt;br&gt;local"]
@@ -1665,7 +1662,6 @@ KubeFlex hosting cluster, as follows.</p>
     otc_ctr_image[OTC container image]
     otc_ctr_image --&gt; gtc_code
     otc_ctr_image --&gt; otp_code
-    otc_hc_src -.-&gt; otc_ctr_image
     ksc_hc_repo[published KS Core chart] --&gt; ksc_hc_src
     ksc_hc_src -.-&gt; osa_hc_repo
     ksc_hc_src -.-&gt; kcm_ctr_image
