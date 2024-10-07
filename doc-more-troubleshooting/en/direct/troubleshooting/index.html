@@ -2987,7 +2987,7 @@ verbosity (<code>-v</code>) of various controllers.</p>
 </ul>
 <h2 id="some-known-problems">Some known problems<a class="headerlink" href="#some-known-problems" title="Permanent link">#</a></h2>
 <h3 id="config-update-for-kind">Config update for Kind<a class="headerlink" href="#config-update-for-kind" title="Permanent link">#</a></h3>
-<p>See <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files">the known issue for too-many-open-files</a></p>
+<p>See <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files">the known issue for "too many open files"</a> in <code>kind</code>.</p>
 <h3 id="confusion-due-to-hidden-state-in-your-kubeconfig">Confusion due to hidden state in your kubeconfig<a class="headerlink" href="#confusion-due-to-hidden-state-in-your-kubeconfig" title="Permanent link">#</a></h3>
 <p>The <code>kflex</code> command maintains and works with a bit of state hidden in your kubeconfig file. This is where KubeFlex stashes the name of the kubeconfig context to use for accessing the KubeFlex hosting cluster. Following is an example of examining that state.</p>
 <div class="language-console highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">mspreitz@mjs13 kubestellar % </span>yq<span class="w"> </span>.preferences<span class="w"> </span><span class="si">${</span><span class="nv">KUBECONFIG</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.kube/config</span><span class="si">}</span>
