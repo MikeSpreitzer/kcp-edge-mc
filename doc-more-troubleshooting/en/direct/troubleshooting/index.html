@@ -2987,7 +2987,7 @@ verbosity (<code>-v</code>) of various controllers.</p>
 </ul>
 <h2 id="some-known-problems">Some known problems<a class="headerlink" href="#some-known-problems" title="Permanent link">#</a></h2>
 <h3 id="config-update-for-kind">Config update for Kind<a class="headerlink" href="#config-update-for-kind" title="Permanent link">#</a></h3>
-<p>See https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files</p>
+<p>See <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files">the known issue for too-many-open-files</a></p>
 <h3 id="confusion-due-to-hidden-state-in-your-kubeconfig">Confusion due to hidden state in your kubeconfig<a class="headerlink" href="#confusion-due-to-hidden-state-in-your-kubeconfig" title="Permanent link">#</a></h3>
 <p>The <code>kflex</code> command maintains and works with a bit of state hidden in your kubeconfig file. This is where KubeFlex stashes the name of the kubeconfig context to use for accessing the KubeFlex hosting cluster. Following is an example of examining that state.</p>
 <div class="language-console highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">mspreitz@mjs13 kubestellar % </span>yq<span class="w"> </span>.preferences<span class="w"> </span><span class="si">${</span><span class="nv">KUBECONFIG</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.kube/config</span><span class="si">}</span>
@@ -3000,7 +3000,7 @@ verbosity (<code>-v</code>) of various controllers.</p>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="go">        name: kflex-config-extension-name</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="go">    name: kflex-config-extension-name</span>
 </code></pre></div>
-<p>The <code>kflex ctx</code> commands are surprisingly hesitant to replace a bad value in there. Later releases of <code>kflex</code> are better than older ones. The following command shows a way to remove that bit of hidden state; after this, a <code>kflex ctx</code> commands will succeed <em>if</em> your current kubeconfig context is the one to use for accessing the KubeFlex hosting cluster.</p>
+<p>The <code>kflex ctx</code> commands are surprisingly hesitant to replace a bad value in there. Later releases of <code>kflex</code> are better than older ones. The following command shows a way to remove that bit of hidden state; after this, a <code>kflex ctx</code> command will succeed <em>if</em> your current kubeconfig context is the one to use for accessing the KubeFlex hosting cluster.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>yq<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;del(.preferences)&#39;</span><span class="w"> </span><span class="si">${</span><span class="nv">KUBECONFIG</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.kube/config</span><span class="si">}</span>
 </code></pre></div>
 <h2 id="making-a-good-trouble-report">Making a good trouble report<a class="headerlink" href="#making-a-good-trouble-report" title="Permanent link">#</a></h2>
