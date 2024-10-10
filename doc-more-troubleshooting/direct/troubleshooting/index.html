@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../favicons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
@@ -1721,30 +1721,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Some known problems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#config-update-for-kind" class="md-nav__link">
-    <span class="md-ellipsis">
-      Config update for Kind
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confusion-due-to-hidden-state-in-your-kubeconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      Confusion due to hidden state in your kubeconfig
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2885,30 +2861,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Some known problems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#config-update-for-kind" class="md-nav__link">
-    <span class="md-ellipsis">
-      Config update for Kind
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confusion-due-to-hidden-state-in-your-kubeconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      Confusion due to hidden state in your kubeconfig
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2986,23 +2938,7 @@ verbosity (<code>-v</code>) of various controllers.</p>
 <li>Remember that Kubernetes controllers tend to report transient problems as errors without making it clear that the problem is transient and tend to not make it clear if/when the problem has been resolved (sigh).</li>
 </ul>
 <h2 id="some-known-problems">Some known problems<a class="headerlink" href="#some-known-problems" title="Permanent link">#</a></h2>
-<h3 id="config-update-for-kind">Config update for Kind<a class="headerlink" href="#config-update-for-kind" title="Permanent link">#</a></h3>
-<p>See <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files">the known issue for "too many open files"</a> in <code>kind</code>.</p>
-<h3 id="confusion-due-to-hidden-state-in-your-kubeconfig">Confusion due to hidden state in your kubeconfig<a class="headerlink" href="#confusion-due-to-hidden-state-in-your-kubeconfig" title="Permanent link">#</a></h3>
-<p>The <code>kflex</code> command maintains and works with a bit of state hidden in your kubeconfig file. This is where KubeFlex stashes the name of the kubeconfig context to use for accessing the KubeFlex hosting cluster. Following is an example of examining that state.</p>
-<div class="language-console highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">mspreitz@mjs13 kubestellar % </span>yq<span class="w"> </span>.preferences<span class="w"> </span><span class="si">${</span><span class="nv">KUBECONFIG</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.kube/config</span><span class="si">}</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">extensions:</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="go">  - extension:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="go">      data:</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="go">        kflex-initial-ctx-name: kscore-stage</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="go">      metadata:</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="go">        creationTimestamp: null</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="go">        name: kflex-config-extension-name</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="go">    name: kflex-config-extension-name</span>
-</code></pre></div>
-<p>The <code>kflex ctx</code> commands are surprisingly hesitant to replace a bad value in there. Later releases of <code>kflex</code> are better than older ones. The following command shows a way to remove that bit of hidden state; after this, a <code>kflex ctx</code> command will succeed <em>if</em> your current kubeconfig context is the one to use for accessing the KubeFlex hosting cluster.</p>
-<div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>yq<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;del(.preferences)&#39;</span><span class="w"> </span><span class="si">${</span><span class="nv">KUBECONFIG</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.kube/config</span><span class="si">}</span>
-</code></pre></div>
+<p>We have <a href="../known-issues/">the start of a list</a>.</p>
 <h2 id="making-a-good-trouble-report">Making a good trouble report<a class="headerlink" href="#making-a-good-trouble-report" title="Permanent link">#</a></h2>
 <p>Basic configuration information.</p>
 <ul>
