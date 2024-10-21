@@ -3138,9 +3138,10 @@ state.</p>
 </code></pre></div>
 <h3 id="ocm-quick-start-with-ingress">OCM Quick Start with Ingress<a class="headerlink" href="#ocm-quick-start-with-ingress" title="Permanent link">#</a></h3>
 <p>This recipe uses a modified version of <a href="https://raw.githubusercontent.com/open-cluster-management-io/OCM/main/solutions/setup-dev-environment/local-up.sh">the OCM Quick Start</a>. The modification is because KubeStellar needs the hosting cluster to have an Ingress controller with SSL passthrough enabled. The modified Quick Start script has the following modifications compared to the baseline.</p>
-<div class="language-text highlight"><pre><span></span><code>1. The `kind` cluster created for the hub has an additional port mapping, where the Ingress controller listens.
-1. The script installs an Ingress controller (based on nginx) into the hub cluster, then patches it to enable SSL passthrough, and later waits for it to be in service.
-</code></pre></div>
+<ol>
+<li>The <code>kind</code> cluster created for the hub has an additional port mapping, where the Ingress controller listens.</li>
+<li>The script installs an Ingress controller (based on nginx) into the hub cluster, then patches it to enable SSL passthrough, and later waits for it to be in service.</li>
+</ol>
 <p>You can invoke the modified OCM Quick Start as follows.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>https://raw.githubusercontent.com/kubestellar/kubestellar/refs/heads/main/scripts/ocm-local-up-for-ingress.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </code></pre></div>
