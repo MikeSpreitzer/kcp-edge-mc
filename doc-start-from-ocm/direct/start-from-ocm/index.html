@@ -3140,7 +3140,7 @@ state.</p>
 <p>This recipe uses a modified version of <a href="https://raw.githubusercontent.com/open-cluster-management-io/OCM/main/solutions/setup-dev-environment/local-up.sh">the OCM Quick Start</a>. The modification is because KubeStellar needs the hosting cluster to have an Ingress controller with SSL passthrough enabled. The modified Quick Start script has the following modifications compared to the baseline.</p>
 <ol>
 <li>The <code>kind</code> cluster created for the hub has an additional port mapping, where the Ingress controller listens.</li>
-<li>The script installs an Ingress controller (based on nginx) into the hub cluster, then patches it to enable SSL passthrough, and later waits for it to be in service.</li>
+<li>The script installs <a href="https://docs.nginx.com/nginx-ingress-controller/">the NGINX Ingress Controller</a> into the hub cluster, then patches the controller to enable SSL passthrough, and later waits for it to be in service.</li>
 </ol>
 <p>You can invoke the modified OCM Quick Start as follows.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>https://raw.githubusercontent.com/kubestellar/kubestellar/refs/heads/main/scripts/ocm-local-up-for-ingress.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
@@ -3161,7 +3161,7 @@ apply labels that will be used in the examples.</p>
 <p>This chart instance will do the following.</p>
 <ul>
 <li>Install KubeFlex in the hosting cluster.</li>
-<li>Tell that the hosting cluster will play the role of an ITS named "its1".</li>
+<li>Assign the hosting cluster the role of an ITS, named "its1".</li>
 <li>Create a KubeFlex ControlPlane named "wds1" to play the role of a WDS.</li>
 <li>Install the KubeStellar core stuff in the hosting cluster.</li>
 </ul>
@@ -3188,7 +3188,7 @@ which is not necessarily true --- so take care for that too.</p>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">done</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>kubectl<span class="w"> </span>--context<span class="w"> </span>wds1<span class="w"> </span><span class="nb">wait</span><span class="w"> </span>--for<span class="w"> </span><span class="nv">condition</span><span class="o">=</span>Established<span class="w"> </span>crd<span class="w"> </span>bindingpolicies.control.kubestellar.io
 </code></pre></div>
-<p>Proceed to <a href="../example-scenarios/#scenario-1-multi-cluster-workload-deployment-with-kubectl">Scenario 1 (multi-cluster workload deployment with kubectl) in the example scenarios</a> <em>after</em> defining the shell variables that characterize the setup done above. Following are setting for those variables, whose meanings are defined <a href="../example-scenarios/#assumptions-and-variables">at the start of the example scenarios document</a>.</p>
+<p>Proceed to <a href="../example-scenarios/#scenario-1-multi-cluster-workload-deployment-with-kubectl">Scenario 1 (multi-cluster workload deployment with kubectl) in the example scenarios</a> <em>after</em> defining the shell variables that characterize the setup done above. Following are the settings for those variables, whose meanings are defined <a href="../example-scenarios/#assumptions-and-variables">at the start of the example scenarios document</a>.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">host_context</span><span class="o">=</span>kind-hub
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nv">its_cp</span><span class="o">=</span>its1
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nv">its_context</span><span class="o">=</span><span class="si">${</span><span class="nv">host_context</span><span class="si">}</span>
