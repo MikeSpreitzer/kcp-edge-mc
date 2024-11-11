@@ -3045,7 +3045,7 @@ Kubernetes practice.</p>
 verbosity (<code>-v</code>) of various controllers.</p>
 <h2 id="things-to-look-at">Things to look at<a class="headerlink" href="#things-to-look-at" title="Permanent link">#</a></h2>
 <ul>
-<li>While double-checking your input is never bad, using <code>kubectl get -o yaml --show-managed-fields</code> adds some good stuff: confirmation that your input was received and parsed as expected, display of any error messages in your API objects, timestamps in the metadata (helpful for comparing with log messages), indication of what last wrote to each part of your API objects and when.</li>
+<li>While double-checking your input is never bad, using <code>kubectl get -o yaml --show-managed-fields</code> to examine the live API objects adds some good stuff: confirmation that your input was received and parsed as expected, display of any error messages in your API objects, timestamps in the metadata (helpful for comparing with log messages), indication of what last wrote to each part of your API objects and when.</li>
 <li>When basic stuff is not working, survey the Pod objects in the KubeFlex hosting cluster to look for ones that are damaged in some way. For example: you can get a summary with the command <code>kubectl --context kind-kubeflex get pods -A</code> --- adjust as necessary for the name of your kubeconfig context to use for the KubeFlex hosting cluster.</li>
 <li>Remember that for each of your BindingPolicy objects, there is a corresponding Binding object that reports what is matching the policy object.</li>
 <li>Although not part of the interface, when debugging you can look at the ManifestWork and WorkStatus objects in the ITS.</li>
