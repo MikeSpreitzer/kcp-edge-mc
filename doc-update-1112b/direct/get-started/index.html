@@ -3407,13 +3407,13 @@
 </ul>
 <p>This page is primarily organized as a sequence of steps. There is also a script that covers a subset of the steps.</p>
 <h2 id="quick-start-using-the-automated-script">Quick Start Using the Automated Script<a class="headerlink" href="#quick-start-using-the-automated-script" title="Permanent link">#</a></h2>
-<p>When reading through the steps in <a href="#below">Setup</a>, after you have <a href="#install-software-prerequisites">established the software prerequisites</a> (including making <code>kind</code> able to create <em>three</em> clusters) you can then use our automated installation script to do the remaining <a href="#setup">Setup</a> steps, from <em>checking</em> the software prerequisites through creating the example WECs.</p>
+<p>When reading through the steps in <a href="#setup">Setup</a>, after you have <a href="#install-software-prerequisites">established the software prerequisites</a> (including making <code>kind</code> able to create <em>three</em> clusters) you can then use our automated installation script to do the remaining <a href="#setup">Setup</a> steps, from <em>checking</em> the software prerequisites through creating the example WECs.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bash<span class="w"> </span>&lt;<span class="o">(</span>curl<span class="w"> </span>-s<span class="w"> </span>https://raw.githubusercontent.com/kubestellar/kubestellar/refs/heads/main/scripts/create-kubestellar-demo-env.sh<span class="o">)</span>
 </code></pre></div>
 <p>If successful, the script will output the variable definitions that you would use when proceeding to the example scenarios. After successfully running the script, proceed to the <a href="#exercise-kubestellar">Exercise KubeStellar</a> section below.</p>
 <p>This script does the same things as described in <a href="#setup">Setup</a> but with maximum concurrency. The concurrency is there to enable the script to complete faster. This makes the script more complicated than what is presented below.</p>
 <h2 id="detailed-step-walkthrough">Detailed Step walkthrough<a class="headerlink" href="#detailed-step-walkthrough" title="Permanent link">#</a></h2>
-<p>The following steps show one concrete example of steps 2--7 from the <a href="../user-guide-intro/#the-full-story">full Installation and Usage outline</a>. This page concludes with forwarding you to one example of the remaining steps. For general setup information, see <a href="../user-guide-intro/#the-full-story">the full story</a>.</p>
+<p>The following steps show one concrete example of steps 2--7 from the <a href="../user-guide-intro/#the-full-story">full Installation and Usage outline</a>.</p>
 <ol>
 <li><a href="#setup">Setup</a><ol>
 <li>Install software prerequisites</li>
