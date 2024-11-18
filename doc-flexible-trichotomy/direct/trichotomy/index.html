@@ -3072,10 +3072,10 @@ into these categories, and you can override these rules with
 <h2 id="default-classification-rules">Default Classification Rules<a class="headerlink" href="#default-classification-rules" title="Permanent link">#</a></h2>
 <ol>
 <li>
-<p>The apiserver-managed fields do not propagate. Examples include
-   these fields in <code>.metadata</code>: <code>creationTimestamp</code>, <code>generation</code>,
-   <code>managedFields,</code>resourceVersion<code>,</code>selfLink<code>(an obsolescent
-   feature of Kubernetes),</code>uid`.</p>
+<p>The apiserver-managed fields do not propagate. These are the
+   following fields in <code>.metadata</code>: <code>creationTimestamp</code>, <code>generation</code>,
+   <code>managedFields</code>, <code>resourceVersion</code>, <code>selfLink</code> (an obsolescent
+   feature of Kubernetes), <code>uid</code>.</p>
 </li>
 <li>
 <p>These additional fields in <code>.metadata</code> do not propagate:
@@ -3126,15 +3126,16 @@ This is modeled on what <code>kubectl</code> accepts.
 Examples: "pods.v1", "jobs.v1.batch", "networkpolicies.v1.networking.k8s.io".</p>
 <p>Currently there are limitations on overrides, as follows.</p>
 <ol>
-<li>You can not add to the reported state;</li>
+<li>You can not add to the reported state.</li>
 <li>You can not declare any part of <code>.status</code> to be desired state.</li>
 </ol>
-<p>Invalid overrides will be reported in <code>.status.errors</code> and otherwise ignored.</p>
+<p>Invalid overrides will be reported in <code>.status.errors</code> of the
+<code>ContentClassifier</code> and otherwise ignored.</p>
 <p>See the definition of <code>ContentClassifier</code> in
 <code>api/control/v1alpha1/types.go</code> for full details (after this feature
 appears in a release we can replace this reference with a URL#fragment
 for the definition on pkg.go.dev).</p>
-<p>Following is an example of a <code>CustomClassifier</code> that the
+<p>Following is an example of a <code>CustomClassifier</code> that says that the
 <code>.status.ready</code> field of a <code>Job</code> does not propagate.</p>
 <div class="language-yaml highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">control.kubestellar.io/v1alpha1</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ContentClassifier</span>
