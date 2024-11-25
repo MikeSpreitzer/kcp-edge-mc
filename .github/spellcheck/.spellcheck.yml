@@ -13,6 +13,15 @@ matrix:
       ignores:
       - code
       - pre
+      - script
+      - style
+      - a
+      - img
+      - href
+      - meta
+      - svg
+      - title
+      - text
   sources:
   - '**/*.md'
   default_encoding: utf-8
