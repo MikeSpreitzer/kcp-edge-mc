@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/readme/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/readme/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/Community/_index/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/Community/_index/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/Community/partners/argocd/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/Community/partners/argocd/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/Community/partners/fluxcd/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/Community/partners/fluxcd/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/Community/partners/kyverno/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/Community/partners/kyverno/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/Community/partners/mvi/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/Community/partners/mvi/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/Community/partners/openziti/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/Community/partners/openziti/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/Community/partners/turbonomic/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/Community/partners/turbonomic/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/common-subs/coming-soon/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/common-subs/coming-soon/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/common-subs/placeholder/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/common-subs/placeholder/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/contribution-guidelines/CONTRIBUTING/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/contribution-guidelines/CONTRIBUTING/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/contribution-guidelines/LICENSE/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/contribution-guidelines/LICENSE/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/contribution-guidelines/coc/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/contribution-guidelines/coc/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/contribution-guidelines/governance/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/contribution-guidelines/governance/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/contribution-guidelines/onboarding/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/contribution-guidelines/onboarding/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/contribution-guidelines/operations/code-management/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/contribution-guidelines/operations/code-management/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/contribution-guidelines/operations/document-management/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/contribution-guidelines/operations/document-management/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/contribution-guidelines/operations/testing-doc-prs/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/contribution-guidelines/operations/testing-doc-prs/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/contribution-guidelines/security/security/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/contribution-guidelines/security/security/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/contribution-guidelines/security/security_contacts/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/contribution-guidelines/security/security_contacts/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/acquire-hosting-cluster/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/acquire-hosting-cluster/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/architecture/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/architecture/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/argo-to-wds1/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/argo-to-wds1/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/binding/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/binding/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/combined-status/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/combined-status/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/contribute/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/contribute/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/control/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/control/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/core-chart/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/core-chart/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/example-scenarios/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/example-scenarios/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/example-wecs/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/example-wecs/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/galaxy-intro/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/galaxy-intro/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/get-started/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/get-started/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/init-hosting-cluster/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/init-hosting-cluster/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/its/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/its/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/known-issues/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/known-issues/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/knownissue-collector-miss/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/knownissue-collector-miss/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/knownissue-kflex-extension/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/knownissue-kflex-extension/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/knownissue-kind-config/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/knownissue-kind-config/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/knownissue-wsl-ghcr-helm/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/knownissue-wsl-ghcr-helm/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/kubeflex-intro/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/kubeflex-intro/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/packaging/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/packaging/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/pr-signoff/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/pr-signoff/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/pre-reqs/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/pre-reqs/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/release-notes/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/release-notes/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/release-testing/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/release-testing/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/release/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/release/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/roadmap/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/roadmap/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/setup-limitations/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/setup-limitations/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/setup-overview/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/setup-overview/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/start-from-ocm/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/start-from-ocm/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/testing/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/testing/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/transforming/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/transforming/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/troubleshooting/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/troubleshooting/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/usage-limitations/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/usage-limitations/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/user-guide-intro/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/user-guide-intro/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/wds/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/wds/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/wec-registration/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/wec-registration/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/wec/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/wec/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.kubestellar.io/doc-report-more/direct/images/image-files-readme/</loc>
+         <lastmod>2024-12-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-report-more/en/direct/images/image-files-readme/"/>
+         
+    </url>
+</urlset>
