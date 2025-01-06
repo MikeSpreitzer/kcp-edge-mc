@@ -3305,7 +3305,9 @@ explicitly, with a command like the following.</p>
 from its
 hub</a>. Do this.</p>
 <p>Check whether all traces of OCM are gone; you can use a command like
-the following.</p>
+the following, supposing that your current kubeconfig file has a
+context for accessing the WEC and the context's name is in the shell
+variable <code>wec_context</code>.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>kubectl<span class="w"> </span>--context<span class="w"> </span><span class="nv">$wec_context</span><span class="w"> </span>get<span class="w"> </span>ns<span class="w">  </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>open-cluster
 </code></pre></div>
 <p>You will probably find that OCM is not all gone; following is example output.</p>
