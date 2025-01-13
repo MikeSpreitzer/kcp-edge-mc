@@ -3136,8 +3136,8 @@ adds commits that are not signed-off then you can repair this by
 adding the signoff to each using <code>git commit -s --amend</code> on each of
 them. Following is an outline of how to do it for a branch that adds
 <strong>exactly one</strong> commit. If your branch adds more than one commit then
-you can extrapolate using <code>git cherry-pick</code> to build up a revised
-series of commits one-by-one.</p>
+you can extrapolate using <code>git cherry-pick -s -S</code> to build up a
+revised series of commits one-by-one.</p>
 <p>The following instructions provide a basic walk-through if you have already created your own fork of the repository but yet not made a clone on your workstation. If you have set up your SSH and GPG keys and include <code>-S</code> on the <code>git commit</code> command line or have configured automatic signing then this will also get the commits signed.</p>
 <ol>
 <li>
