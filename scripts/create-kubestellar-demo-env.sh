@@ -67,7 +67,8 @@ fi
 ##########################################
 cluster_clean_up() {
     error_message=$(eval "$1" 2>&1)
-    if [ $? -ne 0 ]; then
+    echo "$error_message"
+    if false && [ $? -ne 0 ]; then
         echo "clean up failed. Error:"
         echo "$error_message"
     fi
