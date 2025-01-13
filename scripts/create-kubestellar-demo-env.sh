@@ -126,6 +126,7 @@ command_exists() {
 ##########################################
 
 echo -e "\nStarting environment clean up..."
+ps -Tl
 echo -e "Starting cluster clean up..."
 
 if command_exists "k3d"; then
@@ -138,7 +139,10 @@ if command_exists "kind"; then
     cluster_clean_up "kind delete cluster --name kubeflex" &
     cluster_clean_up "kind delete cluster --name cluster1" &
     cluster_clean_up "kind delete cluster --name cluster2" &
+    ps -Tl
     wait
+    echo waited
+    ps -Tl
 fi
 
 while lsof -itcp:9443 > /dev/null; do
