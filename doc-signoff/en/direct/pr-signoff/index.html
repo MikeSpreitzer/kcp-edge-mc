@@ -3099,10 +3099,10 @@
 
 
 <h1 id="git-commit-signoff-and-signing">Git Commit Signoff and Signing<a class="headerlink" href="#git-commit-signoff-and-signing" title="Permanent link">#</a></h1>
-<p><strong>NOTE</strong>: "sign-off" is different from "signing" a commit or tag.  The
-former indicates your assent to the repository's terms for
-contributors, the latter adds a cryptographic checksum that is rarely
-displayed.  See <a href="https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work">the git
+<p><strong>NOTE</strong>: "sign-off" is different from "signing" a commit.  The former
+indicates your assent to the repository's terms for contributors, the
+latter adds a cryptographic checksum that is rarely displayed.  See
+<a href="https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work">the git
 book</a>
 about signing. For commit signoff, do a web search on <code>git
 signoff</code>. GitHub has a concept of <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification">a commit being
@@ -3120,15 +3120,16 @@ the case of an individual, DCO sign-off is accomplished by doing a Git
 <p>We prefer that commits contributed to this repository be signed and
 GitHub verified, but this is not strictly necessary or enforced.</p>
 <h2 id="commit-sign-off">Commit Sign-off<a class="headerlink" href="#commit-sign-off" title="Permanent link">#</a></h2>
-<p>Your submitted PR must pass the automated checks in order to be reviewed. One of these checks that each commit that you propose to contribute is signed-off. If you use the <code>git</code> shell command, this involves passing the <code>-s</code> flag on the command line. For example, the following command will create a signed-off commit but <em>not</em> sign it.</p>
+<p>Your submitted PR must pass the automated checks in order to be merged. One of these checks that each commit that you propose to contribute is signed-off. If you use the <code>git</code> shell command, this involves passing the <code>-s</code> flag on the command line. For example, the following command will create a signed-off commit but <em>not</em> sign it.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-s
 </code></pre></div>
-<p>Alternatively, if the following command will create a commit that is both signed-off and signed.</p>
+<p>Alternatively, the following command will create a commit that is both signed-off and signed.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-S
 </code></pre></div>
 <p>For other tools, consult their documentation.</p>
 <h2 id="signing-commits">Signing Commits<a class="headerlink" href="#signing-commits" title="Permanent link">#</a></h2>
-<p>To sign a commit, you must have a GPG and SSH key. Basic setup instructions can be found below (For more detailed instructions, refer to the Github <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key">GPG</a> and <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">SSH</a> setup pages.)</p>
+<p>To sign any commits, you must have a GPG and SSH key. Basic setup instructions can be found below (For more detailed instructions, refer to the Github <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key">GPG</a> and <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">SSH</a> setup pages.)</p>
+<p>Furthermore: to sign a particular commit, you must either include <code>-S</code> on the <code>git commit</code> command line (see the command exhibited above for an example) or have configured automatic signing (see <a href="https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work#_everyone_must_sign">a hint in the Git Book about that</a>).</p>
 <p>Before starting, make sure that your user email is verified on Github. To check for this:</p>
 <ol>
 <li>Login to Github and navigate to your Github <strong>Settings</strong> page</li>
