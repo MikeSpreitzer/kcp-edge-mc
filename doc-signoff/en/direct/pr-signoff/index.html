@@ -2412,21 +2412,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Commit Sign-off">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#repairing-non-signed-off-commits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Repairing non-signed-off commits
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2460,6 +2445,15 @@
   <a href="#creating-pull-requests-using-the-github-website" class="md-nav__link">
     <span class="md-ellipsis">
       Creating Pull Requests Using the GitHub Website
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repairing-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repairing commits
     </span>
   </a>
   
@@ -3026,21 +3020,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Commit Sign-off">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#repairing-non-signed-off-commits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Repairing non-signed-off commits
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3074,6 +3053,15 @@
   <a href="#creating-pull-requests-using-the-github-website" class="md-nav__link">
     <span class="md-ellipsis">
       Creating Pull Requests Using the GitHub Website
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repairing-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repairing commits
     </span>
   </a>
   
@@ -3120,15 +3108,15 @@ about signing. For commit signoff, do a web search on <code>git
 signoff</code>. GitHub has a concept of <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification">a commit being
 "verified"</a>
 that extends the Git concept of signing.</p>
-<p>In order to get your pull requests approved, you must first complete a
-DCO sign-off. This process is defined by the CNCF, and there are two
+<p>In order to get a pull request approved, you must first complete a DCO
+sign-off for each commit that the request is asking to add to the
+repository. This process is defined by the CNCF, and there are two
 cases: individual contributors and contributors that work for a
-corporate CNCF member. Both mean consent with the terms stated in the
-<code>DCO</code> file at the root of this Git repository.</p>
-<p>In the case of an individual, DCO sign-off is something that you do on
-each commit in your PR. In particular, you need each commit to either
-be Git "signed-off" or GitHub "verified".</p>
-<p>Or maybe not?</p>
+corporate CNCF member. Both mean consent with the terms stated in <a href="https://github.com/kubestellar/kubestellar/blob/main/DCO">the
+<code>DCO</code> file at the root of this Git
+repository</a>. In
+the case of an individual, DCO sign-off is accomplished by doing a Git
+"sign-off" on the commit.</p>
 <p>We prefer that commits contributed to this repository be signed and
 GitHub verified, but this is not strictly necessary or enforced.</p>
 <h2 id="commit-sign-off">Commit Sign-off<a class="headerlink" href="#commit-sign-off" title="Permanent link">#</a></h2>
@@ -3139,48 +3127,6 @@ GitHub verified, but this is not strictly necessary or enforced.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-S
 </code></pre></div>
 <p>For other tools, consult their documentation.</p>
-<h3 id="repairing-non-signed-off-commits">Repairing non-signed-off commits<a class="headerlink" href="#repairing-non-signed-off-commits" title="Permanent link">#</a></h3>
-<p>If you have already created a PR that proposes to merge a branch that
-adds commits that are not signed-off then you can repair this by
-adding the signoff to each using <code>git commit -s --amend</code> on each of
-them. Following is an outline of how to do it for a branch that adds
-<strong>exactly one</strong> commit. If your branch adds more than one commit then
-you can extrapolate using <code>git cherry-pick -s -S</code> to build up a
-revised series of commits one-by-one.</p>
-<p>The following instructions provide a basic walk-through if you have already created your own fork of the repository but yet not made a clone on your workstation. If you have set up your SSH and GPG keys and include <code>-S</code> on the <code>git commit</code> command line or have configured automatic signing then this will also get the commits signed.</p>
-<ol>
-<li>
-<p>Navigate to the <strong>Code</strong> page of the Kubestellar github.</p>
-</li>
-<li>
-<p>Click the <strong>Fork</strong> dropdown in the top right corner of the page.</p>
-<ul>
-<li>Under "Existing Forks" click your fork (should look something like "your_username/kubestellar")</li>
-</ul>
-</li>
-<li>Once in your fork, click the <strong>Code</strong> dropdown.<ul>
-<li>Under the "Local" tab at the top of the dropdown, select the SSH tab</li>
-<li>Copy the SSH repo URL to your clipboard</li>
-</ul>
-</li>
-<li>Open Git Bash (or your CLI of choice), create or change to a different directory if desired.</li>
-<li>Clone the repository using <code>git clone</code> followed by pasting the URL you just copied.</li>
-<li>Change your directory to the Kubestellar repo using <code>cd kubestellar</code>.</li>
-<li><code>git checkout</code> to the branch in your fork where the changes were committed.<ul>
-<li>The branch name should be written at the top of your submitted PR page and looks something like "patch-<em>X</em>" (where "X" should be the number of PRs made on your fork to date)</li>
-</ul>
-</li>
-<li>Once in your branch, type <code>git commit -s --amend</code> to sign off your PR.<ul>
-<li>You may replace <code>--amend</code> with a <code>-m</code> followed by a commit message if you desire; the <code>--amend</code> simply uses the same commit message as the one you wrote when initially submitting the PR</li>
-<li>If prompted with a sign-off page in your Git Bash (or alternative CLI), type <code>:wq!</code> to exit the prompt</li>
-</ul>
-</li>
-<li>Type <code>git push -f origin [branch_name]</code>, replacing <code>[branch_name]</code> with the actual name of your branch.</li>
-<li>Navigate back to your PR github page.<ul>
-<li>A green <code>dco-signoff: yes</code> label indicates that your PR is successfully signed</li>
-</ul>
-</li>
-</ol>
 <h2 id="signing-commits">Signing Commits<a class="headerlink" href="#signing-commits" title="Permanent link">#</a></h2>
 <p>To sign a commit, you must have a GPG and SSH key. Basic setup instructions can be found below (For more detailed instructions, refer to the Github <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key">GPG</a> and <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">SSH</a> setup pages.)</p>
 <p>Before starting, make sure that your user email is verified on Github. To check for this:</p>
@@ -3291,6 +3237,7 @@ revised series of commits one-by-one.</p>
 </ol>
 <p><br /></p>
 <h2 id="creating-pull-requests-using-the-github-website">Creating Pull Requests Using the GitHub Website<a class="headerlink" href="#creating-pull-requests-using-the-github-website" title="Permanent link">#</a></h2>
+<p>This is not recommended for individual contributors, because the commits that it produces are not "signed-off" (as defined by Git) and thus do not carry assent to the DCO; for corporate contributors that is not an issue because that assent is indicated differently.</p>
 <p>Whether it's editing files from Kubestellar.io or directly from the Kubestellar Github, there are a couple steps to follow that streamlines the workflow of your PR:</p>
 <ol>
 <li>
@@ -3304,6 +3251,50 @@ revised series of commits one-by-one.</p>
 <p>Click <strong>Propose Changes</strong> after writing the commit message, review your changes, and then create the PR.</p>
 </li>
 <li>If your PR addresses an already opened issue on the github, make sure to close the issue once your PR is approved and closed.</li>
+</ol>
+<h2 id="repairing-commits">Repairing commits<a class="headerlink" href="#repairing-commits" title="Permanent link">#</a></h2>
+<p>If you have already created a PR that proposes to merge a branch that
+adds commits that are not signed-off then you can repair this (and
+lack of signing, if you choose) by adding the signoff to each using
+<code>git commit -s --amend</code> on each of them. If you also want those
+commits signed then you would use <code>git commit -s -S
+--amend</code>. Following is an outline of how to do it for a branch that
+adds <strong>exactly one</strong> commit. If your branch adds more than one commit
+then you can extrapolate using <code>git cherry-pick -s -S</code> to build up a
+revised series of commits one-by-one.</p>
+<p>The following instructions provide a basic walk-through if you have already created your own fork of the repository but yet not made a clone on your workstation. If you have set up your SSH and GPG keys and include <code>-S</code> on the <code>git commit</code> command line or have configured automatic signing then this will also get the commits signed.</p>
+<ol>
+<li>
+<p>Navigate to the <strong>Code</strong> page of the Kubestellar github.</p>
+</li>
+<li>
+<p>Click the <strong>Fork</strong> dropdown in the top right corner of the page.</p>
+<ul>
+<li>Under "Existing Forks" click your fork (should look something like "your_username/kubestellar")</li>
+</ul>
+</li>
+<li>Once in your fork, click the <strong>Code</strong> dropdown.<ul>
+<li>Under the "Local" tab at the top of the dropdown, select the SSH tab</li>
+<li>Copy the SSH repo URL to your clipboard</li>
+</ul>
+</li>
+<li>Open Git Bash (or your CLI of choice), create or change to a different directory if desired.</li>
+<li>Clone the repository using <code>git clone</code> followed by pasting the URL you just copied.</li>
+<li>Change your directory to the Kubestellar repo using <code>cd kubestellar</code>.</li>
+<li><code>git checkout</code> to the branch in your fork where the changes were committed.<ul>
+<li>The branch name should be written at the top of your submitted PR page and looks something like "patch-<em>X</em>" (where "X" should be the number of PRs made on your fork to date)</li>
+</ul>
+</li>
+<li>Once in your branch, type <code>git commit -s --amend</code> to sign off your PR.<ul>
+<li>The commit will also be signed if either you have set up automatic signing or both include the <code>-S</code> flag on that command and have set up your GPG key.</li>
+<li>You may extend that command with <code>-m</code> followed by a quoted commit message if you desire. Otherwise <code>git</code> will pop up an editor for you to use in making any desired adjustment to the commit message. After making any desired changes, save and exit the editor. FYI: in <code>vi</code> (which GitBash uses), when it is in Command mode (which is the normal mode, and contrasts with Insert mode) the keystrokes <code>:wq!</code> will attempt to save and then will exit no matter what.</li>
+</ul>
+</li>
+<li>Type <code>git push -f origin [branch_name]</code>, replacing <code>[branch_name]</code> with the actual name of your branch.</li>
+<li>Navigate back to your PR github page.<ul>
+<li>A green <code>dco-signoff: yes</code> label indicates that your PR is successfully signed</li>
+</ul>
+</li>
 </ol>
 
 
