@@ -3101,7 +3101,7 @@
 <h1 id="git-commit-signoff-and-signing">Git Commit Signoff and Signing<a class="headerlink" href="#git-commit-signoff-and-signing" title="Permanent link">#</a></h1>
 <p><strong>NOTE</strong>: "sign-off" is different from "signing" a commit.  The former
 indicates your assent to the repository's terms for contributors, the
-latter adds a cryptographic checksum that is rarely displayed.  See
+latter adds a cryptographic signature that is rarely displayed.  See
 <a href="https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work">the git
 book</a>
 about signing. For commit signoff, do a web search on <code>git
@@ -3129,7 +3129,7 @@ GitHub verified, but this is not strictly necessary or enforced.</p>
 <p>For other tools, consult their documentation.</p>
 <h2 id="signing-commits">Signing Commits<a class="headerlink" href="#signing-commits" title="Permanent link">#</a></h2>
 <p>To sign any commits, you must have a GPG and SSH key. Basic setup instructions can be found below (For more detailed instructions, refer to the Github <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key">GPG</a> and <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">SSH</a> setup pages.)</p>
-<p>Furthermore: to sign a particular commit, you must either include <code>-S</code> on the <code>git commit</code> command line (see the command exhibited above for an example) or have configured automatic signing (see <a href="https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work#_everyone_must_sign">a hint in the Git Book about that</a>).</p>
+<p>Furthermore: to sign a particular commit, you must either include <code>-S</code> on the <code>git commit</code> command line (see the command exhibited above for an example) or have configured automatic signing (see <a href="https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work#_everyone_must_sign">"Everyone Must Sign" in the Git Book for a hint about that</a>).</p>
 <p>Before starting, make sure that your user email is verified on Github. To check for this:</p>
 <ol>
 <li>Login to Github and navigate to your Github <strong>Settings</strong> page</li>
@@ -3244,14 +3244,13 @@ GitHub verified, but this is not strictly necessary or enforced.</p>
 <li>
 <p>Changes made to any file are automatically committed to a new branch in your fork.</p>
 <ul>
+<li>After clicking <strong>Commit changes...</strong>, write your commit message summary line and any extended desription that you want. Then click <strong>Propose changes</strong>, review your changes, and then create the PR.</li>
 <li>When making the PR, make sure to specify the type of PR at the beginning of the PR's title (i.e. :bug: if it addresses a bug-type issue)</li>
-<li>If the PR addresses a specific issue that has already been opened in the github, make sure to include the opened issue in <strong>additional comments</strong> (i.e. <code>fixes Issue #XXXX</code>)</li>
 </ul>
 </li>
 <li>
-<p>Click <strong>Propose Changes</strong> after writing the commit message, review your changes, and then create the PR.</p>
+<p>If the PR addresses a specific issue that has already been opened in GitHub, make sure to include the open issue number in <strong>Related Issue(s)</strong> (i.e. <code>Fixes #NNNN</code>); this will cause GitHub to automatically close the Issue once the PR is merged. If you have finished addressing an open issue without getting it automatically closed then explicitly close the issue.</p>
 </li>
-<li>If your PR addresses an already opened issue on the github, make sure to close the issue once your PR is approved and closed.</li>
 </ol>
 <h2 id="repairing-commits">Repairing commits<a class="headerlink" href="#repairing-commits" title="Permanent link">#</a></h2>
 <p>If you have already created a PR that proposes to merge a branch that
