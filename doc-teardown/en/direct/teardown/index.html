@@ -3335,7 +3335,7 @@ KubeStellar core Helm chart.</p>
 <h3 id="delete-helm-chart-instances-in-the-kubeflex-hosting-cluter">Delete Helm chart instances in the KubeFlex hosting cluter<a class="headerlink" href="#delete-helm-chart-instances-in-the-kubeflex-hosting-cluter" title="Permanent link">#</a></h3>
 <p>Look at the Helm chart instances in the KubeFlex hosting cluster. You
 might use a command like the following.</p>
-<div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>mspreitz@mjs13<span class="w"> </span>kubestellar<span class="w"> </span>%<span class="w"> </span>helm<span class="w"> </span>--kube-context<span class="w"> </span><span class="nv">$host_context</span><span class="w"> </span>list<span class="w"> </span>-A
+<div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>helm<span class="w"> </span>--kube-context<span class="w"> </span><span class="nv">$host_context</span><span class="w"> </span>list<span class="w"> </span>-A
 </code></pre></div>
 <p>The output may look something like the following.</p>
 <div class="language-console highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="go">NAME                            NAMESPACE               REVISION    UPDATED                                 STATUS      CHART                                       APP VERSION  </span>
