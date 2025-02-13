@@ -3227,9 +3227,9 @@ required in order to get that temporary token; for a public Helm
 chart, registry credentials are not needed.  Even though fetching a
 public Helm chart does not require registry credentials, <code>helm</code> tries
 to get and use credentials for the <code>ghcr.io</code> registry if that Docker
-configuration file exists.  When that file exists but says something
-messed up, that can lead to an error message about an authorization
-failure in the request to get the temporary token.</p>
+configuration file exists.  When that file exists but specifies
+something that does not work, that can lead to an error message about
+an authorization failure in the request to get the temporary token.</p>
 <p>This pathology is discussed in <a href="https://github.com/helm/helm/issues/13179">an Issue in the Helm repository on
 GitHub</a>.</p>
 <p>For an example, consider the case of someone using Rancher Desktop on
