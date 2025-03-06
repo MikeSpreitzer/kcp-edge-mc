@@ -3394,7 +3394,7 @@ clues about the problem.</p>
 <h4 id="to-increase-the-lower-bound-on-kubeflex-release">To increase the lower bound on KubeFlex release<a class="headerlink" href="#to-increase-the-lower-bound-on-kubeflex-release" title="Permanent link">#</a></h4>
 <ul>
 <li>Update the KubeFlex release in <code>docs/content/direct/pre-reqs.md</code></li>
-<li>Update the "kflex" release in <code>hack/check_pre_req.sh</code> and <code>scripts/check_pre_req.sh</code></li>
+<li>Update the "kflex" release in <code>scripts/check_pre_req.sh</code></li>
 </ul>
 <h3 id="reacting-to-a-new-ocm-status-addon-release">Reacting to a new ocm-status-addon release<a class="headerlink" href="#reacting-to-a-new-ocm-status-addon-release" title="Permanent link">#</a></h3>
 <p>Between each release of <a href="https://github.com/kubestellar/ocm-status-addon">ks/OSA</a> and the next release of ks/ks, update the references to the ocm-status-addon release in the following files.</p>
@@ -3407,9 +3407,6 @@ clues about the problem.</p>
 <ul>
 <li>
 <p>If not already in effect, declare a code freeze. There should be nothing but bug fixes and doc improvements while working towards a regular release.</p>
-</li>
-<li>
-<p><strong>AFTER</strong> the next regular release: delete <code>hack/check_pre_req.sh</code>, delete references to <code>hack/check_pre_req.sh</code> in this document, and delete this step.</p>
 </li>
 <li>
 <p>Edit <code>docs/mkdocs.yml</code> and update the definition of <code>ks_latest_release</code> to <code>$version</code> (e.g., <code>'0.23.0-rc42'</code>). If this is a regular release then also update the definition of <code>ks_latest_regular_release</code>.</p>
