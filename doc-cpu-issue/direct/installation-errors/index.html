@@ -3410,8 +3410,9 @@ the check fails, you get an error message like the following.</p>
 <div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sysctl fs.inotify.max_user_watches is only 155693 but must be at least 524288
 </code></pre></div>
 <p>If you avoid the check but the configuration is not expanded then the
-symptom will most likely be setup ceasing to make progress. Or maybe
-other errors about things not happening or things not existing.</p>
+symptom will most likely be setup ceasing to make progress at some
+point. Or maybe other errors about things not happening or things not
+existing.</p>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">#</a></h2>
 <p>To resolve this error, you need to increase the value of <code>fs.inotify.max_user_watches</code>. Follow the steps below:</p>
 <h3 id="for-rancher-desktop">For Rancher Desktop<a class="headerlink" href="#for-rancher-desktop" title="Permanent link">#</a></h3>
