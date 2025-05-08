@@ -3402,8 +3402,9 @@ typically needs an expanded configuration. This is mostly described in
 <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files">a known issue of
 kind</a>. However,
 that document does not mention the additional complexity that arises
-when your host is a Mac, which does not natively run containers and so
-uses a virtual machine with a Linux guest OS.</p>
+when the OS running the containers is the guest OS inside a virtual
+machine on your host (e.g., a Mac, which does not natively run
+containers and so uses a virtual machine with a Linux guest OS).</p>
 <h2 id="symptoms">Symptoms<a class="headerlink" href="#symptoms" title="Permanent link">#</a></h2>
 <p>Many KubeStellar setup paths check for the needed configuration. When
 the check fails, you get an error message like the following.</p>
