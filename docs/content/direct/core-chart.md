@@ -1,5 +1,17 @@
 # KubeStellar Core chart usage
 
+## Table of Contents
+- [Overview](#overview)
+- [Pre-requisites](#pre-requisites)
+- [KubeStellar Core Chart values](#kubestellar-core-chart-values)
+- [KubeStellar Core Chart usage](#kubestellar-core-chart-usage)
+- [Step-by-Step Installation Example](#step-by-step-installation-example)
+- [Kubeconfig files and contexts for Control Planes](#kubeconfig-files-and-contexts-for-control-planes)
+- [Argo CD integration](#argo-cd-integration)
+- [Uninstalling the KubeStellar Core chart](#uninstalling-the-kubestellar-core-chart)
+
+## Overview
+
 This documents explains how to use KubeStellar Core chart to do three
 of the 11 installation and usage steps; please see [the
 full outline](user-guide-intro.md#the-full-story) for generalities and [Getting Started](get-started.md) for an example of usage.
@@ -185,6 +197,9 @@ helm upgrade --install ks-core oci://ghcr.io/kubestellar/kubestellar/core-chart 
   --set-json ITSes='[{"name":"its1"}]' \
   --set-json WDSes='[{"name":"wds1"}]'
 ```
+
+## Step-by-Step Installation Example
+For a detailed step-by-step installation guide with expected outputs, see [Step-by-Step Installation Guide](core-chart-step-by-step-installation.md).
 
 The core chart also supports the use of a pre-existing cluster (or any space, really) as an ITS. A specific application is to connect to existing OCM clusters. As an example, create a first local kind cluster with OCM installed in it:
 
