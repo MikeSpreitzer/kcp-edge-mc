@@ -4172,10 +4172,10 @@ the website at
 <a href="https://docs.kubestellar.io/unreleased-development/contribution-guidelines/operations/document-management/">https://docs.kubestellar.io/unreleased-development/contribution-guidelines/operations/document-management/</a>
 and (b) directly in GitHub at
 <a href="https://github.com/kubestellar/kubestellar/blob/main/docs/README.md">https://github.com/kubestellar/kubestellar/blob/main/docs/README.md</a>. Unfortunately,
-those two uses interpret the documentation a bit differently. To the
-degree possible, we strive to get the same results from both. When
-that is not possible, considerations for the website rendering takes
-precedence.</p>
+those two uses interpret the documentation sources a bit
+differently. To the degree possible, we strive to get the same results
+from both. When that is not possible, considerations for the website
+rendering takes precedence.</p>
 <h3 id="github-pages">GitHub pages<a class="headerlink" href="#github-pages" title="Permanent link">#</a></h3>
 <p>Our documentation is powered by <a href="https://github.com/jimporter/mike">mike</a> and <a href="https://www.mkdocs.org/">MkDocs</a>. MkDocs is powered by <a href="https://pypi.org/project/Markdown/">Python-Markdown</a>. These are immensely configurable and extensible. You can see our MkDocs configuration in <code>docs/mkdocs.yml</code>. Following are some of the choices we have made.</p>
 <ul>
@@ -4201,8 +4201,19 @@ This is particularly useful for documentation PRs, as it allows you to share a p
 To take advantage of this action, you must ensure that you have forked the repository properly. This entails two things: having a version of the branch named <code>gh-pages</code>, and configuring GitHub to publish a website based on that branch.</p>
 <p>The name of your branch equals the "version" of the website where the rendering appears.</p>
 <h4 id="automatically-render-the-website">Automatically render the website<a class="headerlink" href="#automatically-render-the-website" title="Permanent link">#</a></h4>
-<p>If you have <a href="#creating-a-fork-that-can-use-the-generate-and-push-docs-action">prepared your fork for GitHub Pages rendering</a> then the workflow will trigger automatically whenever you commit changes to a branch whose name begins with <strong>doc-</strong> (e.g. <code>doc-myversion</code>). For example: if you name your branch <code>doc-holliday</code> then the GitHub pages for your fork will get a website version named <code>doc-holliday</code>.</p>
-<p>When preparing a PR that modifies the website, it is <strong>strongly recommended</strong> that you name your branch so that this happens.</p>
+<p>The website rendering workflow will trigger automatically whenever you
+commit changes to a branch whose name begins with <strong>doc-</strong>
+(e.g. <code>doc-myversion</code>).  If you have <a href="#creating-a-fork-that-can-use-the-generate-and-push-docs-action">prepared your fork for GitHub
+Pages
+rendering</a>
+then the workflow will succeed to create/update a website rendering in
+the GitHub Pages of your fork. For example: if you name your branch
+<code>doc-holliday</code> then the GitHub pages for your fork will get a website
+version named <code>doc-holliday</code>.</p>
+<p>When preparing a PR that modifies the website, it is <strong>strongly
+recommended</strong> that you take advantage of this to get a preview
+automatically created, and include a URL for the preview in a comment
+in your PR.</p>
 <h4 id="creating-a-fork-that-can-use-the-generate-and-push-docs-action">Creating a fork that can use the Generate and Push Docs Action<a class="headerlink" href="#creating-a-fork-that-can-use-the-generate-and-push-docs-action" title="Permanent link">#</a></h4>
 <ol>
 <li>Log into your GitHub account via webbrowser</li>
