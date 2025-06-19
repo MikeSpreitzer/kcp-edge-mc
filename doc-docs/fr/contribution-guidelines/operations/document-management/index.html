@@ -4163,7 +4163,7 @@
 <li><code>https://kubestellar.io</code>. This is hosted by GoDaddy and administered by <a href="mailto://andy@clubanderson.com">Andy Anderson</a>. It contains a few redirects. The most important is that <code>https://kubestellar.io/</code> redirects to <code>https://docs.kubestellar.io/</code>.</li>
 <li><code>https://docs.kubestellar.io</code>. This is a GitHub pages website based on the <code>github.com/kubestellar/kubestellar/</code> repository.</li>
 </ul>
-<p><strong>A contributor may have their own copy of the latter website</strong>, at <code>https://${repo_owner}.github.io/${fork_name}</code>, if they have set up the fork properly to render the webpages. This is useful for generating previews of changes before they are merged into the <code>main</code> branch of the shared repository. <strong>A PR that modifies the website should include such a preview.</strong> See the section below on <strong>Serving up documents globally from a fork of the repo via GitHub</strong>.</p>
+<p><strong>A contributor may have their own copy of the latter website</strong>, at <code>https://${repo_owner}.github.io/${fork_name}</code>, if they have <a href="#creating-a-fork-that-can-use-the-generate-and-push-docs-action">set up the fork properly to render the webpages</a>. This is useful for generating previews of changes before they are merged into the <code>main</code> branch of the shared repository. <strong>A PR that modifies the website should include such a preview.</strong> See the section below on <a href="#serving-up-documents-globally-from-a-fork-of-the-repository-via-github">Serving up documents globally from a fork of the repo via GitHub</a>.</p>
 <h3 id="dual-use-documentation-sources">Dual-use documentation sources<a class="headerlink" href="#dual-use-documentation-sources" title="Permanent link">#</a></h3>
 <p>The documentation that is rendered to the website (as described in the
 rest of this page) is designed so that it can also be usefully viewed
@@ -4177,7 +4177,7 @@ differently. To the degree possible, we choose to write the
 documentation sources in a way that is rendered consistently in those
 two views (for example: indenting with four spaces instead of
 three). When that is not possible, considerations for the website
-rendering takes precedence.</p>
+rendering take precedence.</p>
 <h3 id="github-pages">GitHub pages<a class="headerlink" href="#github-pages" title="Permanent link">#</a></h3>
 <p>Our documentation is powered by <a href="https://github.com/jimporter/mike">mike</a> and <a href="https://www.mkdocs.org/">MkDocs</a>. MkDocs is powered by <a href="https://pypi.org/project/Markdown/">Python-Markdown</a>. These are immensely configurable and extensible. You can see our MkDocs configuration in <code>docs/mkdocs.yml</code>. Following are some of the choices we have made.</p>
 <ul>
@@ -4204,7 +4204,7 @@ To take advantage of this action, you must ensure that you have forked the repos
 <p>The name of your branch equals the "version" of the website where the rendering appears.</p>
 <h4 id="automatically-render-the-website">Automatically render the website<a class="headerlink" href="#automatically-render-the-website" title="Permanent link">#</a></h4>
 <p>The website rendering workflow will trigger automatically whenever you
-commit changes to a branch whose name begins with <strong>doc-</strong>
+commit changes to a branch whose name begins with <code>doc-</code>
 (e.g. <code>doc-myversion</code>).  If you have <a href="#creating-a-fork-that-can-use-the-generate-and-push-docs-action">prepared your fork for GitHub
 Pages
 rendering</a>
