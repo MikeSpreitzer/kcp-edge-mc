@@ -2535,6 +2535,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#informational-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informational Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#switching-between-versions" class="md-nav__link">
     <span class="md-ellipsis">
       Switching between versions
@@ -3801,6 +3810,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#informational-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informational Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#switching-between-versions" class="md-nav__link">
     <span class="md-ellipsis">
       Switching between versions
@@ -4258,6 +4276,8 @@ in your PR.</p>
 </li>
 <li>After a minute or so, you should be able to preview your new version of the website at <code>https://${repo_owner}.github.io/${fork_name}/${branch_name}</code></li>
 </ol>
+<h4 id="informational-errors">Informational Errors<a class="headerlink" href="#informational-errors" title="Permanent link">#</a></h4>
+<p>The "Generate and push docs" workflow triggers the broken links crawler workflow, which will fail when there are broken links. This failure also marks the "Generate and push docs" workflow as failed, even though it did not actually fail to generate and push. Do not be discouraged by these informational failures.</p>
 <h4 id="switching-between-versions">Switching between versions<a class="headerlink" href="#switching-between-versions" title="Permanent link">#</a></h4>
 <p>Each branch of your fork will render as its own version. You can use the release dropdown inside the rendered pages to quickly switch between versions.</p>
 <p>Note: the <strong>main</strong> branch will render as <code>https://${repo_owner}.github.io/${fork_name}/main</code>, <strong>NOT</strong> as "unreleased-development" which is a special alias on the main kubestellar.io website.</p>
