@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../favicons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -3590,7 +3590,7 @@
 
 
   
-    <a href="https://github.com/kubestellar/kubestellar/edit/main/docs/content/contribution-guidelines/contributing-inc.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/kubestellar/kubestellar/edit/main/docs/content/contribution-guidelines/contributing-inc.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3644,6 +3644,8 @@ In conformance with CNCF expectations, we will only merge commits that indicate 
 <ul>
 <li>Smaller pull requests are typically easier to review and merge than larger ones. If your pull request is big, it is always recommended to collaborate with the maintainers to find the best way to divide it.</li>
 <li>Do not make a PR from your <code>main</code> branch. Your life will be much easier if the <code>main</code> branch in your fork tracks the <code>main</code> branch in the shared repository.</li>
+<li>Learn to use <code>git rebase</code>. It is your friend. It is one of your most helpful friends. It is how you can cope when other changes merge while you are in the midst of working on your PR.</li>
+<li>There are, broadly speaking, two styles of using Git history: keeping an accurate record of your development process, or producing a simple explanation of the end result. We aim for the latter. Squash out uninteresting intermediate commits.</li>
 <li>Do not merge from <code>main</code> into your PR's branch. That makes a tangled Git history, and we prefer to keep it simple. Instead, rebase your PR's branch onto the latest edition of <code>main</code>.</li>
 <li>When adding/updating a GitHub Actions workflow, be aware of the <a href="#github-action-reference-discipline">action reference discipline</a>.</li>
 <li>For a PR that modifies the website, include a preview. That gets much easier if you follow the documentation about setting up for that (i.e., properly create your <code>gh-pages</code> branch) and make the name of your PR's branch start with "doc-". If you already have a PR with a different sort of name, you can explicitly invoke the rendering workflow --- unless your branch name has a slash or other exotic character in it; stick to alphanumerics plus dash and dot. You can not change the name of the branch in a PR, but you can close a PR and open an equivalent one using a branch with a good name.</li>
@@ -3855,7 +3857,7 @@ contribution. See the <a href="https://github.com/kubestellar/kubestellar/blob/m
       <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "navigation.indexes", "navigation.tabs", "navigation.path", "navigation.footer", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>
