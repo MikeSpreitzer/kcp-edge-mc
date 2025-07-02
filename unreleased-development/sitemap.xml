@@ -361,6 +361,14 @@
          
     </url>
     <url>
+         <loc>https://docs.kubestellar.io/unreleased-development/direct/observability/</loc>
+         <lastmod>2025-07-02</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/unreleased-development/en/direct/observability/"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/unreleased-development/fr/direct/observability/"/>
+         
+    </url>
+    <url>
          <loc>https://docs.kubestellar.io/unreleased-development/direct/packaging/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
