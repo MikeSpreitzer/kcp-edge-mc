@@ -1,5 +1,7 @@
 # Getting Started with KubeStellar
 
+Edit to demo doc preview.
+
 ## Set Up A Demo System
 
 This page shows two ways to create one particular simple configuration that is suitable for kicking the tires (not production usage). This configuration has one `kind` cluster serving as your KubeFlex hosting cluster and two more serving as WECs. This page covers steps 2--7 from [the full installation and usage outline](user-guide-intro.md#the-full-story). This page concludes with forwarding you to some example scenarios that illustrate the remaining steps.
