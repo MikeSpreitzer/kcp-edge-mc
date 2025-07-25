@@ -3484,7 +3484,6 @@
 <ul>
 <li><a href="#what-is-a-wds">What is a WDS?</a></li>
 <li><a href="#creating-a-wds">Creating a WDS</a><ul>
-<li><a href="#use-the-kubestellar-core-helm-chart-to-create-your-wds">Use the KubeStellar Core Helm Chart to create your WDS</a></li>
 <li><a href="#creating-a-kubeconfig-context-for-accessing-the-wds">Creating a kubeconfig context for accessing the WDS</a></li>
 </ul>
 </li>
@@ -3504,9 +3503,9 @@
 <p>Currently the only documented way to create a WDS is by using the <a href="../core-chart/">core Helm chart</a>. See <a href="../get-started/#use-core-helm-chart-to-initialize-kubeflex-and-create-its-and-wds">the step-by-step instructions for getting started</a> for an example.</p>
 <p>The adventurous user could --- after using the core Helm chart to get this <code>PostCreateHook</code> object created --- create a WDS directly using the KubeFlex CLI or API to create a suitable <code>ControlPlane</code> object that uses the same <code>PostCreateHook</code> as the core Helm chart does for creating WDSes.</p>
 <h3 id="creating-a-kubeconfig-context-for-accessing-the-wds">Creating a kubeconfig context for accessing the WDS<a class="headerlink" href="#creating-a-kubeconfig-context-for-accessing-the-wds" title="Permanent link">#</a></h3>
-<p>After creating your WDS, you will need to access it to. To do this you will want to have context for your WDS in your kubeconfig file. The aforementioned step-by-step instructions include doing this.</p>
-<p>The following command will (1) ensure that your kubeconfig file has a context that (a) has the same name as the WDS and (b) has the right contents for accessing the WDS and then (2) make that context your current one. You only need to to this once, after creating the WDS. <strong>BEWARE:</strong> This command must only be used either (a) while the current kubeconfig context is for accessing the KubeFlex hosting cluster or (b) after the KubeFlex CLI has added its <a href="https://github.com/kubestellar/kubeflex/blob/main/docs/users.md#hosting-context">hosting cluster extension</a> into your kubeconfig file.</p>
-<div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># create a the WDS context and make it the current context</span>
+<p>After creating your WDS, you will need access to it. To do this you will want your kubeconfig file to have a context for accessing your WDS. The aforementioned step-by-step instructions include doing this.</p>
+<p>The following command will (1) ensure that your kubeconfig file has a context that has (a) the same name as the WDS and (b) the right contents for accessing the WDS and then (2) make that context be your current one. You only need to to this once, after creating the WDS. <strong>BEWARE:</strong> This command must only be launched either (a) when the current kubeconfig context is for accessing the KubeFlex hosting cluster or (b) after the KubeFlex CLI has added its <a href="https://github.com/kubestellar/kubeflex/blob/main/docs/users.md#hosting-context">hosting cluster extension</a> into your kubeconfig file (see the KubeFlex documentation about that, and, for example, the <code>kflex ctx --set-current-for-hosting</code> comment in the KubeStellar step-by-step setup instructions).</p>
+<div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Create the WDS context if it does not already exist; ensure it has the right contents; make it current.</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>kflex<span class="w"> </span>ctx<span class="w"> </span>--overwrite-existing-context<span class="w"> </span>&lt;wds-name&gt;
 </code></pre></div>
 <p>Any time later that you want to switch your current kubeconfig context back to the one for this WDS, you can do it with either of the following two commands.</p>
@@ -3524,21 +3523,12 @@
 </ol>
 <p>When using KubeFlex ControlPlane types <code>host</code> or <code>external</code> for your WDS, step 1 has already been done before creating the <code>ControlPlane</code> object for the WDS.</p>
 <h2 id="controllers-that-work-with-a-wds">Controllers that work with a WDS<a class="headerlink" href="#controllers-that-work-with-a-wds" title="Permanent link">#</a></h2>
-<p>For the WDS to execute its tasks after it is configured, it will need to interact with the following controllers that live in the Hosting cluster:</p>
-<ol>
-<li>
-<p><strong>KubeStellar Controller Manager</strong>: Watches the WDS <code>BindingPolicy</code> objects and creates corresponding <code>Binding</code> objects that contain references to concrete workload objects and destination clusters.</p>
-</li>
-<li>
-<p><strong>Pluggable Transport Controller</strong>: This projects KubeStellar's workload and control objects from the WDS into the Inventory and Transport Space (ITS).</p>
-</li>
-</ol>
 <p>The following two Pods run the KubeStellar controllers for a WDS.</p>
 <ol>
 <li>The <a href="../architecture/#kubestellar-controller-manager">KubeStellar Controller Manager</a>.</li>
-<li>The <a href="architecturemd.#pluggable-transport-controller">Transport Controller</a>.</li>
+<li>The <a href="../architecture/#pluggable-transport-controller">Transport Controller</a>.</li>
 </ol>
-<p>These controllers are managed as Deployment objects in the KubeFlex hosting cluster.</p>
+<p>These controllers are managed as <code>Deployment</code> objects in the KubeFlex hosting cluster. These <code>Deployment</code> objects are created by the setup procedures discussed above.</p>
 
 
 
