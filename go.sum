@@ -422,8 +422,8 @@ k8s.io/pod-security-admission v0.32.12 h1:P9qpz3DZY1bjBC5WZuKBs8GN1UOpvnBH+MtWUJ
 k8s.io/pod-security-admission v0.32.12/go.mod h1:SNg5SdGxeYemyu48kWPp/Y5104tjmviO7nzI1yxYoS8=
 k8s.io/utils v0.0.0-20241104100929-3ea5e8cea738 h1:M3sRQVHv7vB20Xc2ybTt7ODCeFj6JSWYFzOFnYeS6Ro=
 k8s.io/utils v0.0.0-20241104100929-3ea5e8cea738/go.mod h1:OLgZIPagt7ERELqWJFomSt595RzquPNLL48iOWgYOg0=
-open-cluster-management.io/api v1.0.0 h1:54QllH9DTudCk6VrGt0q8CDsE3MghqJeTaTN4RHZpE0=
-open-cluster-management.io/api v1.0.0/go.mod h1:/OeqXycNBZQoe3WG6ghuWsMgsKGuMZrK8ZpsU6gWL0Y=
+open-cluster-management.io/api v1.0.1-0.20250730122947-5e3423e7794a h1:RtfQsfeU+uedsi7btdGdYeSVJw6v2Zp1pMB5XkgHRW8=
+open-cluster-management.io/api v1.0.1-0.20250730122947-5e3423e7794a/go.mod h1:KEj/4wbUjdbWktrKLL8+mWzAIzE6Ii3bcRr4CvnBNEg=
 sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.0 h1:CPT0ExVicCzcpeN4baWEV2ko2Z/AsiZgEdwgcfwLgMo=
 sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.0/go.mod h1:Ve9uj1L+deCXFrPOk1LpFXqTg7LCFzFso6PA48q/XZw=
 sigs.k8s.io/controller-runtime v0.20.4 h1:X3c+Odnxz+iPTRobG4tp092+CvBU9UK0t/bRf+n0DGU=
