@@ -52,7 +52,7 @@ is_installed() {
                     echo -e "\033[0;31mX\033[0m  structured version '$gotver' is not between '$addlver' (inclusive) and '$exclver' (exclusive)" >&2
                 else
                     echo -e "\033[0;31mX\033[0m  structured version '$gotver' is either less than '$wantver' or not between '$addlver' (inclusive) and '$exclver' (exclusive)" >&2
-		fi
+                fi
                 exit 2
             fi
         else
@@ -218,6 +218,35 @@ is_installed_make() {
 }
 
 is_installed_ocm() {
+    local path
+    if path=$(command -v clusteradm); then
+        # sadly, `clusteradm version` only works if kubectl reaches a server.
+        # See https://github.com/open-cluster-management-io/clusteradm/issues/536
+        if kubectl cluster-info &> /dev/null; then
+            : regular test will work
+        else
+            # Use `go version -m` if we can
+            if which go &> /dev/null; then
+		caver=$(go version -m $(which clusteradm) | grep -w mod | awk '{ print $3 }')
+                is_installed 'OCM CLI' \
+                             'clusteradm' \
+                             'echo "$caver"' \
+                             'echo "$caver"' \
+                             'bash <(curl -L https://raw.githubusercontent.com/open-cluster-management-io/clusteradm/main/install.sh) 1.0.2' \
+                             "" \
+                             v1.0 \
+                             v1.1
+		return 0
+
+            else
+                echo -e "\033[0;31m???\033[0m $path exists but unable to check its version; hoping for the best, beware strange failures!"
+                return 0
+            fi
+        fi
+    else
+        : no such command, regular check will work
+    fi
+
     is_installed 'OCM CLI' \
         'clusteradm' \
         'clusteradm version 2> /dev/null | grep ^client' \
