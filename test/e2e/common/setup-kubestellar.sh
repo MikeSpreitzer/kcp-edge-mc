@@ -123,7 +123,7 @@ else
     --set-json='WDSes=[{"name":"wds1"}]' \
     --set verbosity.kubestellar=${KUBESTELLAR_CONTROLLER_MANAGER_VERBOSITY} \
     --set verbosity.transport=${TRANSPORT_CONTROLLER_VERBOSITY}
-  fi
+fi
 popd
 
 : Waiting for OCM hub to be ready...
