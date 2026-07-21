@@ -62,8 +62,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Package and push charts
+        env:
+          REF_NAME: ${{ github.ref_name }}
         run: |
-          chartVersion=$(echo ${{ github.ref_name }} | cut -c 2-)
+          chartVersion="${REF_NAME#v}"
 
           sed -i "s/^KUBESTELLAR_VERSION:.*$/KUBESTELLAR_VERSION: \"${chartVersion}\"/g" ${{ env.CORE_CHART_PATH }}/values.yaml
 
