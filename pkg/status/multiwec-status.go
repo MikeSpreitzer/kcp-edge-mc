@@ -86,7 +86,7 @@ func (c *Controller) handleMultiWEC(ctx context.Context, wObjID util.ObjectIdent
 		return nil
 	}
 
-	// Aggregate for known kind that Kubestellar handle specially which are mainly kind available as built-in healthchecks for Argocd
+	// Aggregate for known kinds that KubeStellar handles specially, which are mainly kinds available as built-in healthchecks for ArgoCD
 	var aggregatedStatus map[string]any
 	var errAggregate error
 

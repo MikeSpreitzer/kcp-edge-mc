@@ -230,7 +230,7 @@ func NewController(parentLogger logr.Logger,
 		apiResourceLists, wdsName, allowedGroupsSet, workloadObsserver)
 }
 
-// doDiscovery contains the exact one occurence of ServerPreferredResources() in this repository.
+// doDiscovery contains the exact one occurrence of ServerPreferredResources() in this repository.
 // doDiscovery is supposed to be invoked exactly one time during the lifecycle of a binding controller.
 // That is, full API discovery against the WDS is done exactly one time during the lifecycle of a binding controller.
 // doDiscovery also returns the number of successfully discovered GVRs.
